@@ -68,37 +68,9 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 
 ### ✨ Featured Projects
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <h4>📱 AR Flashcard</h4>
-      <p><em>Interactive 3D model learning platform.</em></p>
-      <p>Brings educational flashcards to life using augmented reality (AR) to enhance engagement and simplify complex concepts.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Flutter-FF4D94?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
-        <img src="https://img.shields.io/badge/Firebase-333333?style=flat-square&logo=firebase&logoColor=FF4D94" alt="Firebase" />
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h4>🌐 CivicSync</h4>
-      <p><em>Civic tech platform for community engagement.</em></p>
-      <p>Bridges the gap between citizens and authorities through real-time grievance reporting and civic action tracking.</p>
-      <p>
-        <img src="https://img.shields.io/badge/React-FF4D94?style=flat-square&logo=react&logoColor=white" alt="React" />
-        <img src="https://img.shields.io/badge/Node.js-333333?style=flat-square&logo=node.js&logoColor=FF4D94" alt="Node" />
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h4>⚡ FastFit</h4>
-      <p><em>All-in-one health and workout analytics app.</em></p>
-      <p>Provides custom workouts, comprehensive macro tracking, and interactive progress visualizations.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Next.js-FF4D94?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
-        <img src="https://img.shields.io/badge/Python-333333?style=flat-square&logo=python&logoColor=FF4D94" alt="Python" />
-      </p>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="assets/projects.svg" alt="Featured Projects" width="100%" />
+</div>
 
 ---
 

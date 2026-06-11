@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 530" width="760" height="530">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090611"/>
+      <stop offset="50%" stop-color="#0f0920"/>
+      <stop offset="100%" stop-color="#130b26"/>
+    </linearGradient>
+    <filter id="nebula" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="card-glow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="dot-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="title-glow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <linearGradient id="cg-0" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff63b1" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0e0a1b" stop-opacity="0.92" />
+    </linearGradient>
+
+    <linearGradient id="cg-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c060d0" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0e0a1b" stop-opacity="0.92" />
+    </linearGradient>
+
+    <linearGradient id="cg-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0e0a1b" stop-opacity="0.92" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .section-title {
+      fill: #ffb7d5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+    .sub-label {
+      fill: #7a6e99;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    .project-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .project-desc {
+      fill: #e1daf2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    .project-highlight {
+      fill: #c5bcdb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1px;
+      dominant-baseline: middle;
+    }
+    @keyframes float-p {
+      from { transform: translateY(0px); opacity: 0.3; }
+      to   { transform: translateY(-6px); opacity: 0.75; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="760" height="530" rx="14" fill="url(#bg)"/>
+  <rect x="0.75" y="0.75" width="758.5" height="528.5" rx="13.25" fill="none" stroke="#ff80bf" stroke-width="1" stroke-opacity="0.28"/>
+
+  <!-- Nebula clouds -->
+  <circle cx="100" cy="150" r="110" fill="#ff4d94" opacity="0.06" filter="url(#nebula)"/>
+  <circle cx="660" cy="380" r="120" fill="#8a2be2" opacity="0.08" filter="url(#nebula)"/>
+  <circle cx="380" cy="260" r="90" fill="#c060d0" opacity="0.04" filter="url(#nebula)"/>
+
+  <!-- Constellations -->
+  
+  <line x1="20" y1="24"  x2="380" y2="18"  stroke="#ff63b1" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="380" y1="18" x2="740" y2="22"  stroke="#c060d0" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="25"  y1="505" x2="310" y2="515" stroke="#ff80bf" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="310" y1="515" x2="735" y2="510" stroke="#8a2be2" stroke-width="0.4" stroke-opacity="0.12"/>
+
+  <!-- Stars & sparkles -->
+  <path d="M 20 20 Q 20 24 24 24 Q 20 24 20 28 Q 20 24 16 24 Q 20 24 20 20 Z" fill="#ffb7d5" opacity="0.6"/>
+  <path d="M 740 17 Q 740 22 745 22 Q 740 22 740 27 Q 740 22 735 22 Q 740 22 740 17 Z" fill="#ffb7d5" opacity="0.6"/>
+  <path d="M 735 506 Q 735 510 739 510 Q 735 510 735 514 Q 735 510 731 510 Q 735 510 735 506 Z" fill="#ffb7d5" opacity="0.6"/>
+  <path d="M 25 500 Q 25 505 30 505 Q 25 505 25 510 Q 25 505 20 505 Q 25 505 25 500 Z" fill="#ffb7d5" opacity="0.6"/>
+  <path d="M 380 14 Q 380 18 384 18 Q 380 18 380 22 Q 380 18 376 18 Q 380 18 380 14 Z" fill="#ffb7d5" opacity="0.6"/>
+  <circle cx="705" cy="65" r="1.5" fill="#ffb7d5" opacity="0.5"/>
+  <circle cx="55" cy="480" r="1.5" fill="#c060d0" opacity="0.4"/>
+  <circle cx="310" cy="515" r="1.2" fill="#ff80bf" opacity="0.4"/>
+  <circle cx="450" cy="22" r="1.2" fill="#8a2be2" opacity="0.45"/>
+
+  <!-- Floating particles -->
+  <circle cx="60" cy="120" r="0.9" fill="#ff63b1" opacity="0.35" style="animation: float-p 4.1s ease-in-out 1.2s infinite alternate;"/>
+  <circle cx="710" cy="150" r="1" fill="#c060d0" opacity="0.3" style="animation: float-p 5.2s ease-in-out 2.8s infinite alternate;"/>
+  <circle cx="45" cy="270" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: float-p 3.8s ease-in-out 0.5s infinite alternate;"/>
+  <circle cx="705" cy="340" r="1.1" fill="#8a2be2" opacity="0.3" style="animation: float-p 6s ease-in-out 3.5s infinite alternate;"/>
+  <circle cx="55" cy="420" r="1" fill="#ff80bf" opacity="0.35" style="animation: float-p 4.5s ease-in-out 1.8s infinite alternate;"/>
+
+  <!-- Title -->
+  <text x="24" y="38" class="section-title" filter="url(#title-glow)">✨  FEATURED PROJECTS</text>
+  <text x="24" y="53" class="sub-label">Flagship applications and portfolio centerpieces</text>
+
+  <!-- Project Cards -->
+  
+  <!-- Card 1: CivicSync -->
+  <g class="project-card-group">
+    <!-- Card glow halo -->
+    <rect x="22.5" y="68.5" width="715" height="135" rx="13" fill="#ff4d94" opacity="0.08" filter="url(#card-glow)"/>
+    <!-- Card body -->
+    <rect x="24" y="70" width="712" height="132" rx="12" fill="url(#cg-0)"/>
+    <!-- Card border -->
+    <rect x="24.75" y="70.75" width="710.5" height="130.5" rx="11.25" fill="none" stroke="#ff63b1" stroke-width="1" stroke-opacity="0.35"/>
+    
+    <!-- Icon Circle -->
+    <circle cx="56" cy="106" r="22" fill="#0c0717" stroke="#ff63b1" stroke-width="1.2" stroke-opacity="0.6" filter="url(#dot-glow)"/>
+    <text x="56" y="56" transform="translate(0, 50)" font-size="22" text-anchor="middle" dominant-baseline="middle">🏙️</text>
+    
+    <!-- Title -->
+    <text x="96" y="104" class="project-title" fill="#ff63b1">CivicSync</text>
+    
+    <!-- Tech stack badges -->
+    
+      <rect x="96" y="126" width="38" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="115" y="134.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">MERN</text>
+      <rect x="139" y="126" width="44" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="161" y="134.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">React</text>
+      <rect x="188" y="126" width="56" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="216" y="134.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">Node.js</text>
+      <rect x="96" y="147" width="56" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="124" y="155.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">MongoDB</text>
+      <rect x="157" y="147" width="62" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="188" y="155.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">Maps API</text>
+      <rect x="96" y="168" width="38" height="16" rx="8" fill="#3d1b54" stroke="#ff63b1" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="115" y="176.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#ff63b1" text-anchor="middle" dominant-baseline="middle">Auth</text>
+    
+    <!-- Description -->
+    <text x="295" y="102" class="project-desc">Location-based civic reporting and management platform.</text>
+    
+    <!-- Highlights -->
+    
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 122 Q 295 126 299 126 Q 295 126 295 130 Q 295 126 291 126 Q 295 126 295 122 Z" fill="#ff63b1" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="127" class="project-highlight">Integrated interactive Maps API for real-time visualization and issue tracking.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 145 Q 295 149 299 149 Q 295 149 295 153 Q 295 149 291 149 Q 295 149 295 145 Z" fill="#ff63b1" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="150" class="project-highlight">Built location-based reporting, categorization, and Role-Based Access Control.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 168 Q 295 172 299 172 Q 295 172 295 176 Q 295 172 291 172 Q 295 172 295 168 Z" fill="#ff63b1" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="173" class="project-highlight">Developed dashboards for monitoring issue status, resolution progress, and transparency.</text>
+      </g>
+  </g>
+  
+  <!-- Card 2: Euler -->
+  <g class="project-card-group">
+    <!-- Card glow halo -->
+    <rect x="22.5" y="216.5" width="715" height="135" rx="13" fill="#d080e0" opacity="0.08" filter="url(#card-glow)"/>
+    <!-- Card body -->
+    <rect x="24" y="218" width="712" height="132" rx="12" fill="url(#cg-1)"/>
+    <!-- Card border -->
+    <rect x="24.75" y="218.75" width="710.5" height="130.5" rx="11.25" fill="none" stroke="#c060d0" stroke-width="1" stroke-opacity="0.35"/>
+    
+    <!-- Icon Circle -->
+    <circle cx="56" cy="254" r="22" fill="#0c0717" stroke="#c060d0" stroke-width="1.2" stroke-opacity="0.6" filter="url(#dot-glow)"/>
+    <text x="56" y="56" transform="translate(0, 198)" font-size="22" text-anchor="middle" dominant-baseline="middle">📚</text>
+    
+    <!-- Title -->
+    <text x="96" y="252" class="project-title" fill="#c060d0">Euler</text>
+    
+    <!-- Tech stack badges -->
+    
+      <rect x="96" y="274" width="38" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="115" y="282.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">MERN</text>
+      <rect x="139" y="274" width="74" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="176" y="282.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">TypeScript</text>
+      <rect x="96" y="295" width="44" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="118" y="303.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">React</text>
+      <rect x="145" y="295" width="56" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="173" y="303.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">Node.js</text>
+      <rect x="96" y="316" width="56" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="124" y="324.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">MongoDB</text>
+      <rect x="157" y="316" width="56" height="16" rx="8" fill="#2a1044" stroke="#c060d0" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="185" y="324.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#c060d0" text-anchor="middle" dominant-baseline="middle">AI APIs</text>
+    
+    <!-- Description -->
+    <text x="295" y="250" class="project-desc">AI-powered developer workspace and codebase intelligence hub.</text>
+    
+    <!-- Highlights -->
+    
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 270 Q 295 274 299 274 Q 295 274 295 278 Q 295 274 291 274 Q 295 274 295 270 Z" fill="#c060d0" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="275" class="project-highlight">Developed Architecture Engine generating system designs and blueprints from prompts.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 293 Q 295 297 299 297 Q 295 297 295 301 Q 295 297 291 297 Q 295 297 295 293 Z" fill="#c060d0" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="298" class="project-highlight">Built Repo Intelligence for code structure analysis and dependency mapping.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 316 Q 295 320 299 320 Q 295 320 295 324 Q 295 320 291 320 Q 295 320 295 316 Z" fill="#c060d0" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="321" class="project-highlight">Implemented AI Dev Assistant workflow and centralized developer chat experience.</text>
+      </g>
+  </g>
+  
+  <!-- Card 3: Veda AI -->
+  <g class="project-card-group">
+    <!-- Card glow halo -->
+    <rect x="22.5" y="364.5" width="715" height="135" rx="13" fill="#aa4aff" opacity="0.08" filter="url(#card-glow)"/>
+    <!-- Card body -->
+    <rect x="24" y="366" width="712" height="132" rx="12" fill="url(#cg-2)"/>
+    <!-- Card border -->
+    <rect x="24.75" y="366.75" width="710.5" height="130.5" rx="11.25" fill="none" stroke="#8a2be2" stroke-width="1" stroke-opacity="0.35"/>
+    
+    <!-- Icon Circle -->
+    <circle cx="56" cy="402" r="22" fill="#0c0717" stroke="#8a2be2" stroke-width="1.2" stroke-opacity="0.6" filter="url(#dot-glow)"/>
+    <text x="56" y="56" transform="translate(0, 346)" font-size="22" text-anchor="middle" dominant-baseline="middle">🧠</text>
+    
+    <!-- Title -->
+    <text x="96" y="400" class="project-title" fill="#8a2be2">Veda AI</text>
+    
+    <!-- Tech stack badges -->
+    
+      <rect x="96" y="422" width="38" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="115" y="430.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">MERN</text>
+      <rect x="139" y="422" width="74" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="176" y="430.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">TypeScript</text>
+      <rect x="96" y="443" width="44" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="118" y="451.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">React</text>
+      <rect x="145" y="443" width="56" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="173" y="451.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">Node.js</text>
+      <rect x="96" y="464" width="56" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="124" y="472.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">MongoDB</text>
+      <rect x="157" y="464" width="74" height="16" rx="8" fill="#150a28" stroke="#8a2be2" stroke-width="0.8" stroke-opacity="0.45"/>
+      <text x="194" y="472.5" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" fill="#8a2be2" text-anchor="middle" dominant-baseline="middle">Gemini API</text>
+    
+    <!-- Description -->
+    <text x="295" y="398" class="project-desc">AI-powered adaptive learning and performance diagnostic platform.</text>
+    
+    <!-- Highlights -->
+    
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 418 Q 295 422 299 422 Q 295 422 295 426 Q 295 422 291 422 Q 295 422 295 418 Z" fill="#8a2be2" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="423" class="project-highlight">Developed a real-time adaptive engine dynamically adjusting question difficulty.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 441 Q 295 445 299 445 Q 295 445 295 449 Q 295 445 291 445 Q 295 445 295 441 Z" fill="#8a2be2" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="446" class="project-highlight">Integrated Gemini API to auto-generate subject- and level-specific assessments.</text>
+      </g>
+      <g>
+        <!-- Sparkle bullet -->
+        <path d="M 295 464 Q 295 468 299 468 Q 295 468 295 472 Q 295 468 291 468 Q 295 468 295 464 Z" fill="#8a2be2" opacity="0.8"/>
+        <!-- Highlight text -->
+        <text x="310" y="469" class="project-highlight">Created detailed diagnostic progress reports with parent/teacher/student dashboards.</text>
+      </g>
+  </g>
+  
+
+</svg>
