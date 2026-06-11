@@ -43,11 +43,9 @@ function generateSvg() {
       ry = 6;
     }
     
-    barSegments += `  <rect x="${currentX}" y="${barY}" width="${segmentWidth}" height="${barHeight}" rx="${rx}" ry="${ry}" fill="${lang.color}" class="bar-segment" />\n`;
+    barSegments += `  <rect x="${currentX.toFixed(2)}" y="${barY}" width="${segmentWidth.toFixed(2)}" height="${barHeight}" rx="${rx}" ry="${ry}" fill="${lang.color}" class="bar-segment" />\n`;
     currentX += segmentWidth;
   });
-
-  // Calculate legend coordinates (2 columns, 2 rows)
   let legendHtml = '';
   languages.forEach((lang, index) => {
     const col = index % 2;

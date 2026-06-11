@@ -131,7 +131,7 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 ### 🌸 Most Used Languages
 
 <div align="center">
-  <img src="assets/most-used-languages.svg" alt="Most Used Languages" width="480px" />
+  <img src="assets/most-used-languages.svg?v=1" alt="Most Used Languages" width="480" />
 </div>
 
 ---
