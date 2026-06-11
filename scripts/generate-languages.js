@@ -8,162 +8,211 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// User-customizable languages and percentages
+// Languages data
 const languages = [
-  { name: 'Dart & Flutter', percentage: 40.5, color: '#ff63b1' },
-  { name: 'JavaScript & Web', percentage: 32.8, color: '#a84cb0' },
-  { name: 'C++', percentage: 15.2, color: '#ff80bf' },
-  { name: 'Python & AI', percentage: 11.5, color: '#8a2be2' }
+  { name: 'Dart & Flutter', percentage: 40.5, color: '#ff63b1', badge: '#3d1b54' },
+  { name: 'JavaScript', percentage: 32.8, color: '#c060d0', badge: '#2a1044' },
+  { name: 'C++', percentage: 15.2, color: '#ff80bf', badge: '#1a0c30' },
+  { name: 'Python', percentage: 11.5, color: '#8a2be2', badge: '#150a28' }
 ];
 
+function star(x, y, size) {
+  return `<path d="M ${x} ${y - size} Q ${x} ${y} ${x + size} ${y} Q ${x} ${y} ${x} ${y + size} Q ${x} ${y} ${x - size} ${y} Q ${x} ${y} ${x} ${y - size} Z" fill="#ffb7d5" opacity="0.6"/>`;
+}
+
+function dot(x, y, r, color, opacity) {
+  return `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" opacity="${opacity}"/>`;
+}
+
 function generateSvg() {
-  const width = 480;
-  const height = 180;
-  
-  // Calculate distribution bar coordinates
-  const barWidth = 410;
-  const barHeight = 12;
-  const barX = 35;
-  const barY = 65;
-  
+  const W = 760;
+  const H = 210;
+  const barX = 48;
+  const barW = W - 96;
+  const barY = 90;
+  const barH = 14;
+
+  // ── Distribution bar segments ──────────────────────────────────────────────
   let currentX = barX;
   let barSegments = '';
-  
-  languages.forEach((lang, index) => {
-    const segmentWidth = (barWidth * lang.percentage) / 100;
-    
-    // Determine corner rounding: round only left side of first segment, and right side of last segment
-    let rx = 0;
-    let ry = 0;
-    if (index === 0) {
-      rx = 6;
-      ry = 6;
-    } else if (index === languages.length - 1) {
-      rx = 6;
-      ry = 6;
+  languages.forEach((lang, i) => {
+    const segW = (barW * lang.percentage) / 100;
+    const isFirst = i === 0;
+    const isLast = i === languages.length - 1;
+    // Use a clipPath trick: full rounded rect for first & last
+    if (isFirst) {
+      barSegments += `<rect x="${currentX.toFixed(2)}" y="${barY}" width="${segW.toFixed(2)}" height="${barH}" rx="7" ry="7" fill="${lang.color}"/>\n`;
+      // Mask the right rounded corners of the first segment
+      barSegments += `<rect x="${(currentX + segW - 7).toFixed(2)}" y="${barY}" width="7" height="${barH}" fill="${lang.color}"/>\n`;
+    } else if (isLast) {
+      barSegments += `<rect x="${currentX.toFixed(2)}" y="${barY}" width="${segW.toFixed(2)}" height="${barH}" rx="7" ry="7" fill="${lang.color}"/>\n`;
+      // Mask the left rounded corners of the last segment
+      barSegments += `<rect x="${currentX.toFixed(2)}" y="${barY}" width="7" height="${barH}" fill="${lang.color}"/>\n`;
+    } else {
+      barSegments += `<rect x="${currentX.toFixed(2)}" y="${barY}" width="${segW.toFixed(2)}" height="${barH}" fill="${lang.color}"/>\n`;
     }
-    
-    barSegments += `  <rect x="${currentX.toFixed(2)}" y="${barY}" width="${segmentWidth.toFixed(2)}" height="${barHeight}" rx="${rx}" ry="${ry}" fill="${lang.color}" class="bar-segment" />\n`;
-    currentX += segmentWidth;
+    currentX += segW;
   });
-  let legendHtml = '';
-  languages.forEach((lang, index) => {
-    const col = index % 2;
-    const row = Math.floor(index / 2);
-    
-    const lx = 45 + col * 205;
-    const ly = 110 + row * 30;
-    
-    legendHtml += `
-    <g class="legend-item" transform="translate(${lx}, ${ly})">
-      <circle cx="0" cy="-4" r="5" fill="${lang.color}" filter="url(#glow-soft)" />
-      <text x="18" y="0" class="lang-name">${lang.name}</text>
-      <text x="145" y="0" class="lang-pct">${lang.percentage.toFixed(1)}%</text>
+
+  // ── Per-language mini indicator bars (stacked labels below) ───────────────
+  let labelsHtml = '';
+  const colW = Math.floor(barW / languages.length);
+  languages.forEach((lang, i) => {
+    // badge pill
+    const bx = barX + i * colW;
+    const bw = colW - 12;
+    const by = 125;
+    labelsHtml += `
+    <g class="lang-group">
+      <!-- pill badge -->
+      <rect x="${bx}" y="${by}" width="${bw}" height="22" rx="11" fill="${lang.badge}" stroke="${lang.color}" stroke-width="1" stroke-opacity="0.5"/>
+      <!-- dot -->
+      <circle cx="${bx + 12}" cy="${by + 11}" r="4" fill="${lang.color}" filter="url(#dot-glow)"/>
+      <!-- name -->
+      <text x="${bx + 22}" y="${by + 15}" class="lang-name">${lang.name}</text>
+      <!-- percentage label -->
+      <text x="${bx + bw - 8}" y="${by + 15}" class="lang-pct">${lang.percentage.toFixed(1)}%</text>
     </g>`;
+
+    // mini vertical constellation line from bar to badge
+    const lineX = (bx + bx + bw) / 2;
+    labelsHtml += `<line x1="${lineX}" y1="${barY + barH + 1}" x2="${lineX}" y2="${by}" stroke="${lang.color}" stroke-width="0.7" stroke-opacity="0.22" stroke-dasharray="2 3"/>`;
   });
 
-  // Sparkles coordinate grid
-  const sparkles = [
-    { x: 25, y: 32, size: 6 },
-    { x: 440, y: 150, size: 5 },
-    { x: 410, y: 35, size: 4 },
-    { x: 50, y: 155, size: 4 }
-  ];
-  let sparklesHtml = '';
-  sparkles.forEach(s => {
-    sparklesHtml += `  <path d="M ${s.x} ${s.y - s.size} Q ${s.x} ${s.y} ${s.x + s.size} ${s.y} Q ${s.x} ${s.y} ${s.x} ${s.y + s.size} Q ${s.x} ${s.y} ${s.x - s.size} ${s.y} Q ${s.x} ${s.y} ${s.x} ${s.y - s.size} Z" fill="#ffb7d5" opacity="0.6" />\n`;
-  });
+  // ── Stars & sparkles ───────────────────────────────────────────────────────
+  const decorations = [
+    star(22, 28, 5),
+    star(740, 25, 4),
+    star(738, 185, 5),
+    star(16, 190, 4),
+    star(380, 18, 4),
+    star(585, 185, 3),
+    star(175, 185, 3),
+    dot(700, 55, 1.5, '#ffb7d5', 0.5),
+    dot(55,  155, 1.5, '#c060d0', 0.5),
+    dot(310, 195, 1.2, '#ff80bf', 0.4),
+    dot(450,  22, 1.2, '#8a2be2', 0.45),
+  ].join('\n  ');
 
-  // Full SVG Template
+  // ── Constellation lines (decorative) ──────────────────────────────────────
+  const constellations = `
+  <line x1="22" y1="28"  x2="380" y2="18"  stroke="#ff63b1" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="380" y1="18" x2="740" y2="25"  stroke="#c060d0" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="16"  y1="190" x2="175" y2="185" stroke="#ff80bf" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="175" y1="185" x2="585" y2="185" stroke="#8a2be2" stroke-width="0.4" stroke-opacity="0.12"/>
+  <line x1="585" y1="185" x2="738" y2="185" stroke="#c060d0" stroke-width="0.4" stroke-opacity="0.12"/>`;
+
+  // ── Floating cosmic particles ──────────────────────────────────────────────
+  const particles = [
+    [60,  68, 1.0, '#ff63b1', 0.35, 4.1, 1.2],
+    [200, 82, 0.9, '#c060d0', 0.3,  5.2, 2.8],
+    [430, 72, 1.1, '#ffb7d5', 0.4,  3.8, 0.5],
+    [600, 65, 0.8, '#8a2be2', 0.3,  6.0, 3.5],
+    [710, 78, 1.0, '#ff80bf', 0.35, 4.5, 1.8],
+    [130, 170, 0.8, '#c060d0', 0.25, 5.5, 2.0],
+    [520, 172, 1.0, '#ff63b1', 0.3,  4.0, 0.8],
+  ].map(([x, y, r, color, op, dur, del]) =>
+    `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" opacity="${op}" style="animation: float-p ${dur}s ease-in-out ${del}s infinite alternate;"/>`
+  ).join('\n  ');
+
   const svgContent = `<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
   <defs>
-    <!-- Dark elegant card styling -->
-    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0712" />
-      <stop offset="100%" stop-color="#120c22" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#090611"/>
+      <stop offset="50%"  stop-color="#0f0920"/>
+      <stop offset="100%" stop-color="#130b26"/>
     </linearGradient>
-
-    <!-- Glassmorphic glow filter -->
-    <filter id="glow-card" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="nebula" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="dot-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="title-glow" x="-10%" y="-40%" width="120%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="bar-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <style>
-    .bg { fill: url(#card-grad); }
-    .border { stroke: #ff80bf; stroke-width: 1.2; stroke-opacity: 0.35; fill: none; }
-    .title {
-      fill: #ffb7d5;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1.2px;
-    }
     .lang-name {
-      fill: #e1def0;
+      fill: #e0daf0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 500;
     }
     .lang-pct {
-      fill: #8f85a8;
+      fill: #a898c8;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 10.5px;
+      font-weight: 700;
       text-anchor: end;
     }
-    .bar-segment {
-      transition: opacity 0.3s;
+    .section-title {
+      fill: #ffb7d5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
     }
-    .legend-item {
-      cursor: pointer;
+    .sub-label {
+      fill: #7a6e99;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
     }
-    .legend-item:hover text {
-      fill: #ffffff;
+    @keyframes float-p {
+      from { transform: translateY(0px);  opacity: 0.3; }
+      to   { transform: translateY(-5px); opacity: 0.7; }
     }
   </style>
 
-  <!-- Card Background with subtle neon pink border -->
-  <rect width="${width}" height="${height}" rx="12" class="bg" />
-  <rect width="${width - 1.5}" height="${height - 1.5}" x="0.75" y="0.75" rx="11.25" class="border" />
+  <!-- Background -->
+  <rect width="${W}" height="${H}" rx="14" fill="url(#bg)"/>
+  <rect x="0.75" y="0.75" width="${W - 1.5}" height="${H - 1.5}" rx="13.25" fill="none" stroke="#ff80bf" stroke-width="1" stroke-opacity="0.28"/>
 
-  <!-- Background Nebula Glow -->
-  <circle cx="400" cy="140" r="60" fill="#a84cb0" opacity="0.15" filter="url(#glow-card)" />
-  <circle cx="60" cy="40" r="40" fill="#ff63b1" opacity="0.1" filter="url(#glow-card)" />
+  <!-- Nebula clouds -->
+  <circle cx="90"  cy="50"  r="70"  fill="#ff4d94" opacity="0.07" filter="url(#nebula)"/>
+  <circle cx="${W - 90}" cy="${H - 50}" r="80" fill="#8a2be2" opacity="0.09" filter="url(#nebula)"/>
+  <circle cx="${W / 2}" cy="${H / 2}" r="50" fill="#c060d0" opacity="0.04" filter="url(#nebula)"/>
 
-  <!-- Decorative Sparkles -->
-  ${sparklesHtml}
+  <!-- Constellation lines -->
+  ${constellations}
 
-  <!-- Header Title -->
-  <text x="35" y="38" class="title">🌸 MOST USED LANGUAGES</text>
+  <!-- Stars & sparkles -->
+  ${decorations}
 
-  <!-- Distribution Bar -->
-  <g class="bar-container">
-    <!-- Background track -->
-    <rect x="${barX}" y="${barY}" width="${barWidth}" height="${barHeight}" rx="6" ry="6" fill="#1b1525" />
-    ${barSegments}
-  </g>
+  <!-- Floating particles -->
+  ${particles}
 
-  <!-- Legend grid -->
-  ${legendHtml}
-</svg>
-`;
+  <!-- Title -->
+  <text x="48" y="42" class="section-title" filter="url(#title-glow)">🌸  MOST USED LANGUAGES</text>
+  <text x="48" y="58" class="sub-label">Technology distribution across all repositories</text>
+
+  <!-- Bar track -->
+  <rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" rx="7" fill="#1c1530"/>
+  <!-- Bar segments -->
+  ${barSegments}
+  <!-- Bar shine overlay -->
+  <rect x="${barX}" y="${barY}" width="${barW}" height="${barH / 2}" rx="7" fill="url(#bar-shine)"/>
+
+  <!-- Language badges -->
+  ${labelsHtml}
+
+  <!-- Total label -->
+  <text x="${W - 48}" y="${barY - 6}" class="sub-label" text-anchor="end">100% of activity</text>
+</svg>`;
 
   fs.writeFileSync(outputPath, svgContent, 'utf8');
-  console.log(`Successfully generated Most Used Languages SVG at ${outputPath}!`);
+  console.log(`Generated: ${outputPath}`);
 }
 
 generateSvg();
