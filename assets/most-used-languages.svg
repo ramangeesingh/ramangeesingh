@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180">
+  <defs>
+    <!-- Dark elegant card styling -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0712" />
+      <stop offset="100%" stop-color="#120c22" />
+    </linearGradient>
+
+    <!-- Glassmorphic glow filter -->
+    <filter id="glow-card" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#card-grad); }
+    .border { stroke: #ff80bf; stroke-width: 1.2; stroke-opacity: 0.35; fill: none; }
+    .title {
+      fill: #ffb7d5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+    .lang-name {
+      fill: #e1def0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .lang-pct {
+      fill: #8f85a8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-anchor: end;
+    }
+    .bar-segment {
+      transition: opacity 0.3s;
+    }
+    .legend-item {
+      cursor: pointer;
+    }
+    .legend-item:hover text {
+      fill: #ffffff;
+    }
+  </style>
+
+  <!-- Card Background with subtle neon pink border -->
+  <rect width="480" height="180" rx="12" class="bg" />
+  <rect width="478.5" height="178.5" x="0.75" y="0.75" rx="11.25" class="border" />
+
+  <!-- Background Nebula Glow -->
+  <circle cx="400" cy="140" r="60" fill="#a84cb0" opacity="0.15" filter="url(#glow-card)" />
+  <circle cx="60" cy="40" r="40" fill="#ff63b1" opacity="0.1" filter="url(#glow-card)" />
+
+  <!-- Decorative Sparkles -->
+    <path d="M 25 26 Q 25 32 31 32 Q 25 32 25 38 Q 25 32 19 32 Q 25 32 25 26 Z" fill="#ffb7d5" opacity="0.6" />
+  <path d="M 440 145 Q 440 150 445 150 Q 440 150 440 155 Q 440 150 435 150 Q 440 150 440 145 Z" fill="#ffb7d5" opacity="0.6" />
+  <path d="M 410 31 Q 410 35 414 35 Q 410 35 410 39 Q 410 35 406 35 Q 410 35 410 31 Z" fill="#ffb7d5" opacity="0.6" />
+  <path d="M 50 151 Q 50 155 54 155 Q 50 155 50 159 Q 50 155 46 155 Q 50 155 50 151 Z" fill="#ffb7d5" opacity="0.6" />
+
+
+  <!-- Header Title -->
+  <text x="35" y="38" class="title">🌸 MOST USED LANGUAGES</text>
+
+  <!-- Distribution Bar -->
+  <g class="bar-container">
+    <!-- Background track -->
+    <rect x="35" y="65" width="410" height="12" rx="6" ry="6" fill="#1b1525" />
+      <rect x="35" y="65" width="166.05" height="12" rx="6" ry="6" fill="#ff63b1" class="bar-segment" />
+  <rect x="201.05" y="65" width="134.48" height="12" rx="0" ry="0" fill="#a84cb0" class="bar-segment" />
+  <rect x="335.53" y="65" width="62.32" height="12" rx="0" ry="0" fill="#ff80bf" class="bar-segment" />
+  <rect x="397.84999999999997" y="65" width="47.15" height="12" rx="6" ry="6" fill="#8a2be2" class="bar-segment" />
+
+  </g>
+
+  <!-- Legend grid -->
+  
+    <g class="legend-item" transform="translate(45, 110)">
+      <circle cx="0" cy="-4" r="5" fill="#ff63b1" filter="url(#glow-soft)" />
+      <text x="18" y="0" class="lang-name">Dart & Flutter</text>
+      <text x="145" y="0" class="lang-pct">40.5%</text>
+    </g>
+    <g class="legend-item" transform="translate(250, 110)">
+      <circle cx="0" cy="-4" r="5" fill="#a84cb0" filter="url(#glow-soft)" />
+      <text x="18" y="0" class="lang-name">JavaScript & Web</text>
+      <text x="145" y="0" class="lang-pct">32.8%</text>
+    </g>
+    <g class="legend-item" transform="translate(45, 140)">
+      <circle cx="0" cy="-4" r="5" fill="#ff80bf" filter="url(#glow-soft)" />
+      <text x="18" y="0" class="lang-name">C++</text>
+      <text x="145" y="0" class="lang-pct">15.2%</text>
+    </g>
+    <g class="legend-item" transform="translate(250, 140)">
+      <circle cx="0" cy="-4" r="5" fill="#8a2be2" filter="url(#glow-soft)" />
+      <text x="18" y="0" class="lang-name">Python & AI</text>
+      <text x="145" y="0" class="lang-pct">11.5%</text>
+    </g>
+</svg>

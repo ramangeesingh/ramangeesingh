@@ -128,24 +128,10 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 
 ---
 
-### 📊 Stats & Performance
+### 🌸 Most Used Languages
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api?username=ramangeesingh&show_icons=true&title_color=ff4d94&icon_color=ff4d94&text_color=ffe6f2&bg_color=0d1117&border_color=ff4d94&border_radius=8" alt="GitHub Stats" />
-      </td>
-      <td align="center" valign="middle">
-        <img src="https://leetcard.jacoblin.cool/ramangeesingh?theme=dark&font=Fira%20Code&active=true" alt="LeetCode Stats" />
-      </td>
-    </tr>
-    <tr>
-      <td align="center" colspan="2" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ramangeesingh&layout=compact&title_color=ff4d94&icon_color=ff4d94&text_color=ffe6f2&bg_color=0d1117&border_color=ff4d94&border_radius=8" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
+  <img src="assets/most-used-languages.svg" alt="Most Used Languages" width="480px" />
 </div>
 
 ---
