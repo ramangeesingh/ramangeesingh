@@ -1,0 +1,36 @@
+name: Generate Contribution Vine
+
+on:
+  schedule:
+    # Run once every 24 hours at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Generate Contribution Vine SVG
+        run: node scripts/generate-vine.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/contribution-vine.svg
+          git diff-index --quiet HEAD || git commit -m "Update contribution vine SVG [skip ci]"
+          git push

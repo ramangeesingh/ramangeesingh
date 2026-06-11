@@ -118,12 +118,12 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
   </tr>
 </table>
 
-### 🌸 Contribution Blossom Tree
+---
+
+### 🌸 Contribution Garden
 
 <div align="center">
-  <img src="assets/contribution_tree.svg" alt="Contribution Blossom Tree" width="100%" />
-  <br />
-  <sub>"Every commit is a flower. Consistency creates the forest."</sub>
+  <img src="assets/contribution-vine.svg" alt="Ramangee's Contribution Vine" width="100%" />
 </div>
 
 ---
