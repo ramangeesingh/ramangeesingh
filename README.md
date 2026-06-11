@@ -102,21 +102,11 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 
 ---
 
-### 🏆 Hackathons & Highlights
+### 🏆 Achievements
 
-<table>
-  <tr>
-    <td>
-      <strong>Hack N Win 2.0 — StyleSync</strong><br>
-      <em>We brought our custom fashion recommendation app idea to life!</em>
-      <ul>
-        <li><strong>Role:</strong> Full-Stack Development & UX/UI Design</li>
-        <li><strong>Team:</strong> Ramangee, Vrinda, Alok, Prabhanshu</li>
-        <li><strong>Key Takeaway:</strong> Passion, caffeine, and clean teamwork make the dream work.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img src="assets/achievements.svg" alt="Achievements" width="100%" />
+</div>
 
 ---
 
