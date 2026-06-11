@@ -656,48 +656,48 @@
 
 
   <!-- Falling Petals -->
-  <path d="M 691 100 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.9s ease-in-out 0.7s infinite; --fdx: -0.5px; --frot: 181deg; transform-origin: 691px 100px;" />
-  <path d="M 703 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.6s ease-in-out 9.6s infinite; --fdx: 2.3px; --frot: 294deg; transform-origin: 703px 61px;" />
-  <path d="M 238 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 8.9s ease-in-out 6.8s infinite; --fdx: 13.2px; --frot: 244deg; transform-origin: 238px 61px;" />
-  <path d="M 235 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.7s ease-in-out 9.9s infinite; --fdx: -2.2px; --frot: 175deg; transform-origin: 235px 61px;" />
-  <path d="M 447 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 8.6s ease-in-out 2.7s infinite; --fdx: 17.3px; --frot: 312deg; transform-origin: 447px 61px;" />
-  <path d="M 676 100 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 4.8s ease-in-out 5.1s infinite; --fdx: 13.1px; --frot: 244deg; transform-origin: 676px 100px;" />
-  <path d="M 689 113 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.7s ease-in-out 9.9s infinite; --fdx: -8.5px; --frot: 142deg; transform-origin: 689px 113px;" />
-  <path d="M 679 100 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.6s ease-in-out 5.0s infinite; --fdx: 0.6px; --frot: 254deg; transform-origin: 679px 100px;" />
-  <path d="M 679 48 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.5s ease-in-out 7.8s infinite; --fdx: 17.9px; --frot: 279deg; transform-origin: 679px 48px;" />
-  <path d="M 616 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.7s ease-in-out 0.9s infinite; --fdx: -3.2px; --frot: 208deg; transform-origin: 616px 61px;" />
-  <path d="M 240 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.4s ease-in-out 7.3s infinite; --fdx: -7.9px; --frot: 308deg; transform-origin: 240px 61px;" />
-  <path d="M 705 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 8.4s ease-in-out 2.1s infinite; --fdx: 3.8px; --frot: 47deg; transform-origin: 705px 74px;" />
-  <path d="M 679 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 8.0s ease-in-out 0.0s infinite; --fdx: -10.0px; --frot: 214deg; transform-origin: 679px 74px;" />
-  <path d="M 681 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.9s ease-in-out 3.8s infinite; --fdx: -7.1px; --frot: 217deg; transform-origin: 681px 74px;" />
-  <path d="M 244 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.7s ease-in-out 6.7s infinite; --fdx: -11.1px; --frot: 167deg; transform-origin: 244px 74px;" />
+  <path d="M 679 100 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.9s ease-in-out 1.5s infinite; --fdx: -3.1px; --frot: 227deg; transform-origin: 679px 100px;" />
+  <path d="M 685 100 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 8.4s ease-in-out 5.9s infinite; --fdx: -12.8px; --frot: 30deg; transform-origin: 685px 100px;" />
+  <path d="M 686 113 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.0s ease-in-out 6.1s infinite; --fdx: 4.7px; --frot: 222deg; transform-origin: 686px 113px;" />
+  <path d="M 705 48 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.0s ease-in-out 8.7s infinite; --fdx: -7.1px; --frot: 268deg; transform-origin: 705px 48px;" />
+  <path d="M 263 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.6s ease-in-out 7.1s infinite; --fdx: -12.7px; --frot: 301deg; transform-origin: 263px 61px;" />
+  <path d="M 125 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.4s ease-in-out 0.1s infinite; --fdx: -6.6px; --frot: 266deg; transform-origin: 125px 74px;" />
+  <path d="M 709 35 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.0s ease-in-out 7.0s infinite; --fdx: 12.1px; --frot: 123deg; transform-origin: 709px 35px;" />
+  <path d="M 241 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.9s ease-in-out 5.4s infinite; --fdx: 19.0px; --frot: 91deg; transform-origin: 241px 61px;" />
+  <path d="M 701 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.8s ease-in-out 4.7s infinite; --fdx: 1.4px; --frot: 194deg; transform-origin: 701px 74px;" />
+  <path d="M 451 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.6s ease-in-out 9.3s infinite; --fdx: -9.0px; --frot: 9deg; transform-origin: 451px 61px;" />
+  <path d="M 248 74 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.8s ease-in-out 6.1s infinite; --fdx: -6.2px; --frot: 44deg; transform-origin: 248px 74px;" />
+  <path d="M 705 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.9s ease-in-out 4.1s infinite; --fdx: 10.4px; --frot: 185deg; transform-origin: 705px 61px;" />
+  <path d="M 685 48 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 5.5s ease-in-out 10.0s infinite; --fdx: -3.1px; --frot: 175deg; transform-origin: 685px 48px;" />
+  <path d="M 619 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 6.2s ease-in-out 0.3s infinite; --fdx: 0.3px; --frot: 346deg; transform-origin: 619px 61px;" />
+  <path d="M 675 61 c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall 7.5s ease-in-out 3.7s infinite; --fdx: 9.0px; --frot: 326deg; transform-origin: 675px 61px;" />
 
 
   <!-- Floating Sparkles (Fireflies) -->
-  <circle cx="526" cy="106" r="0.9" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.3s ease-in-out 2.4s infinite; --dx: -12.4px; --dy: -12.7px;" />
-  <circle cx="539" cy="106" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 7.0s ease-in-out 4.4s infinite; --dx: 5.4px; --dy: -10.5px;" />
-  <circle cx="233" cy="47" r="1.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.6s ease-in-out 3.2s infinite; --dx: -13.3px; --dy: 6.2px;" />
-  <circle cx="34" cy="45" r="1.3" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 0.8s infinite; --dx: -14.3px; --dy: -7.7px;" />
-  <circle cx="583" cy="91" r="1.3" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.4s ease-in-out 0.9s infinite; --dx: -14.5px; --dy: -7.1px;" />
-  <circle cx="306" cy="99" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.1s ease-in-out 1.1s infinite; --dx: 14.9px; --dy: 11.5px;" />
-  <circle cx="72" cy="93" r="1.4" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.5s ease-in-out 2.0s infinite; --dx: -5.9px; --dy: 4.9px;" />
-  <circle cx="413" cy="59" r="0.9" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.5s ease-in-out 1.4s infinite; --dx: 0.1px; --dy: -10.8px;" />
-  <circle cx="606" cy="31" r="1.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 3.4s infinite; --dx: 2.7px; --dy: 13.4px;" />
-  <circle cx="532" cy="109" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.6s ease-in-out 4.2s infinite; --dx: -2.7px; --dy: 6.1px;" />
-  <circle cx="395" cy="113" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 2.6s infinite; --dx: -10.1px; --dy: -3.4px;" />
-  <circle cx="385" cy="112" r="1.4" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.4s ease-in-out 2.7s infinite; --dx: -8.9px; --dy: 13.5px;" />
-  <circle cx="529" cy="90" r="1.4" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 3.8s infinite; --dx: 2.5px; --dy: -1.1px;" />
-  <circle cx="581" cy="94" r="2.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.6s ease-in-out 0.2s infinite; --dx: 11.2px; --dy: 2.3px;" />
-  <circle cx="649" cy="105" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.8s ease-in-out 3.4s infinite; --dx: -2.0px; --dy: -10.6px;" />
-  <circle cx="553" cy="81" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.6s ease-in-out 3.6s infinite; --dx: -2.8px; --dy: -6.0px;" />
-  <circle cx="557" cy="114" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.7s ease-in-out 3.7s infinite; --dx: 15.0px; --dy: -2.2px;" />
-  <circle cx="394" cy="49" r="1.4" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.6s ease-in-out 3.7s infinite; --dx: 3.0px; --dy: -10.9px;" />
-  <circle cx="626" cy="52" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.5s ease-in-out 3.1s infinite; --dx: 6.4px; --dy: 2.1px;" />
-  <circle cx="565" cy="80" r="1.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.7s ease-in-out 1.7s infinite; --dx: 10.8px; --dy: -3.4px;" />
-  <circle cx="689" cy="108" r="1.7" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.9s ease-in-out 2.8s infinite; --dx: 2.2px; --dy: -10.5px;" />
-  <circle cx="692" cy="45" r="1.2" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.5s ease-in-out 4.5s infinite; --dx: 1.7px; --dy: -14.4px;" />
-  <circle cx="327" cy="48" r="1.7" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.8s ease-in-out 4.9s infinite; --dx: -2.8px; --dy: -7.4px;" />
-  <circle cx="564" cy="101" r="0.7" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.3s ease-in-out 3.4s infinite; --dx: -14.8px; --dy: 4.9px;" />
-  <circle cx="31" cy="48" r="2.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 4.6s infinite; --dx: -2.9px; --dy: 13.4px;" />
+  <circle cx="228" cy="47" r="2.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.2s ease-in-out 0.6s infinite; --dx: 1.1px; --dy: 13.5px;" />
+  <circle cx="278" cy="100" r="1.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.4s ease-in-out 1.3s infinite; --dx: 7.5px; --dy: 1.8px;" />
+  <circle cx="407" cy="33" r="1.3" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.9s ease-in-out 2.9s infinite; --dx: -6.5px; --dy: 0.5px;" />
+  <circle cx="558" cy="98" r="1.1" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.1s ease-in-out 3.6s infinite; --dx: -6.3px; --dy: -7.0px;" />
+  <circle cx="646" cy="76" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.3s ease-in-out 0.8s infinite; --dx: 8.7px; --dy: 3.3px;" />
+  <circle cx="113" cy="76" r="1.7" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.0s ease-in-out 2.4s infinite; --dx: 4.3px; --dy: -12.3px;" />
+  <circle cx="519" cy="56" r="1.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.6s ease-in-out 2.0s infinite; --dx: -10.0px; --dy: -6.0px;" />
+  <circle cx="164" cy="90" r="1.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.5s ease-in-out 2.4s infinite; --dx: 2.8px; --dy: 5.8px;" />
+  <circle cx="343" cy="104" r="1.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 2.1s infinite; --dx: 8.9px; --dy: 3.9px;" />
+  <circle cx="725" cy="95" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.4s ease-in-out 0.1s infinite; --dx: -0.6px; --dy: -13.7px;" />
+  <circle cx="337" cy="46" r="1.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.5s ease-in-out 1.9s infinite; --dx: 1.6px; --dy: 10.9px;" />
+  <circle cx="576" cy="107" r="1.3" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.5s ease-in-out 2.2s infinite; --dx: 1.6px; --dy: -10.6px;" />
+  <circle cx="426" cy="107" r="1.2" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.4s ease-in-out 1.2s infinite; --dx: 14.4px; --dy: 8.9px;" />
+  <circle cx="453" cy="93" r="1.4" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.6s ease-in-out 1.7s infinite; --dx: -9.3px; --dy: 14.3px;" />
+  <circle cx="449" cy="48" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.3s ease-in-out 4.9s infinite; --dx: 3.1px; --dy: 6.6px;" />
+  <circle cx="502" cy="46" r="1.1" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.0s ease-in-out 0.6s infinite; --dx: 2.3px; --dy: 3.5px;" />
+  <circle cx="512" cy="79" r="0.5" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.5s ease-in-out 4.4s infinite; --dx: 5.1px; --dy: -13.6px;" />
+  <circle cx="144" cy="107" r="2.0" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.9s ease-in-out 3.0s infinite; --dx: -12.2px; --dy: -8.5px;" />
+  <circle cx="408" cy="32" r="1.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.4s ease-in-out 2.9s infinite; --dx: -13.7px; --dy: 9.4px;" />
+  <circle cx="594" cy="108" r="1.1" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 3.5s ease-in-out 4.2s infinite; --dx: 13.7px; --dy: 6.4px;" />
+  <circle cx="614" cy="59" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 5.6s ease-in-out 0.4s infinite; --dx: -4.2px; --dy: 9.9px;" />
+  <circle cx="229" cy="82" r="1.5" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.3s ease-in-out 4.1s infinite; --dx: 10.8px; --dy: -0.3px;" />
+  <circle cx="379" cy="55" r="0.6" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.0s ease-in-out 1.9s infinite; --dx: -3.4px; --dy: 10.6px;" />
+  <circle cx="517" cy="33" r="1.2" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 4.0s ease-in-out 4.8s infinite; --dx: 11.0px; --dy: -7.5px;" />
+  <circle cx="663" cy="111" r="0.8" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float 6.7s ease-in-out 1.8s infinite; --dx: -14.0px; --dy: -10.3px;" />
 
 </svg>
