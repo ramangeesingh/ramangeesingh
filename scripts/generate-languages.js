@@ -69,7 +69,7 @@ function generateSvg() {
       <!-- dot -->
       <circle cx="${bx + 12}" cy="${by + 11}" r="4" fill="${lang.color}" filter="url(#dot-glow)"/>
       <!-- name -->
-      <text x="${bx + 22}" y="${by + 15}" class="lang-name">${lang.name}</text>
+      <text x="${bx + 22}" y="${by + 15}" class="lang-name">${lang.name.replace(/&/g, '&amp;')}</text>
       <!-- percentage label -->
       <text x="${bx + bw - 8}" y="${by + 15}" class="lang-pct">${lang.percentage.toFixed(1)}%</text>
     </g>`;
@@ -187,7 +187,7 @@ function generateSvg() {
   <!-- Constellation lines -->
   ${constellations}
 
-  <!-- Stars & sparkles -->
+  <!-- Stars and sparkles -->
   ${decorations}
 
   <!-- Floating particles -->
