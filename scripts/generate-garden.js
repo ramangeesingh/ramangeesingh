@@ -28,58 +28,168 @@ https.get(`https://github.com/users/${username}/contributions`, (res) => {
   process.exit(1);
 });
 
-function drawLeaf(cx, cy, level, idx) {
-  const scale = (0.55 + level * 0.18).toFixed(2);
-  const rotate = (idx * 68) % 360;
-  // Offset to grow out from the active cell sides
-  const ox = cx + (idx % 2 === 0 ? 5 : -5);
-  const oy = cy + (idx % 3 === 0 ? 5 : -5);
-  const dur = (Math.random() * 2.5 + 2.0).toFixed(1);
-  const del = (Math.random() * 3.5).toFixed(1);
-  
-  return `  <g transform="translate(${ox}, ${oy}) scale(${scale})">
-    <path d="M 0 0 C -3 -3, -1 -8, 4 -9 C 5 -6, 4 -2, 0 0 Z" fill="#2bb35c" opacity="0.8" style="animation: leaf-sway ${dur}s ease-in-out ${del}s infinite alternate; transform-origin: 0px 0px;" />
+// 🌱 Level 1 Sprout
+function drawSprout(cx, cy, delay, idx) {
+  const scale = 0.85;
+  const swayDur = (Math.random() * 1.0 + 2.5).toFixed(1);
+  const swayDel = (Math.random() * 2.0).toFixed(1);
+
+  return `  <g transform="translate(${cx}, ${cy})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <g style="animation: leaf-sway ${swayDur}s ease-in-out ${swayDel}s infinite alternate; transform-origin: 0px 5px; transform: scale(${scale});">
+        <!-- Stem -->
+        <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
+        <!-- Left Leaf -->
+        <path d="M 0 -1 C -2 -3, -4 -3, -5 -1 C -4 1, -2 1, 0 -1 Z" fill="#2bb35c" />
+        <!-- Right Leaf -->
+        <path d="M 0 -1 C 2 -3, 4 -3, 5 -1 C 4 1, 2 1, 0 -1 Z" fill="#2bb35c" />
+      </g>
+    </g>
   </g>\n`;
 }
 
-function drawFlower(cx, cy, level, idx, delay) {
-  let r = 2;
-  let petalColor = '#f2fff2'; // Honeydew / white
-  let centerColor = '#39d353'; // Emerald center
-  let isSpecial = false;
-  
-  if (level === 1) {
-    r = 1.6;
-    petalColor = '#e0fae0'; // Very pale green
-    centerColor = '#106b3e';
-  } else if (level === 2) {
-    r = 2.4;
-    petalColor = '#f5fff5'; // Light sage-white
-    centerColor = '#2bb35c';
-  } else if (level === 3) {
-    r = 3.2;
-    petalColor = '#ffffff'; // White
-    centerColor = '#7bf099'; // Glowing pale green center
-  } else if (level === 4) {
-    r = 4.0;
-    petalColor = '#ffffff'; // Pure white
-    centerColor = '#00ff88'; // Glowing neon emerald center
-    isSpecial = true;
+// 🌿 Level 2 Bud
+function drawBud(cx, cy, delay, idx) {
+  const scale = 0.9;
+  const swayDur = (Math.random() * 0.8 + 2.3).toFixed(1);
+  const swayDel = (Math.random() * 2.0).toFixed(1);
+
+  return `  <g transform="translate(${cx}, ${cy})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <g style="animation: leaf-sway ${swayDur}s ease-in-out ${swayDel}s infinite alternate; transform-origin: 0px 5px; transform: scale(${scale});">
+        <!-- Stem -->
+        <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
+        <!-- Leaf -->
+        <path d="M 0 2 C -2 1, -4 0, -5 -2 C -4 -3, -2 -2, 0 2 Z" fill="#2bb35c" />
+        <!-- Bud Petals -->
+        <circle cx="0" cy="-4.5" r="1.3" fill="#f5fff5" opacity="0.95" />
+        <circle cx="1.3" cy="-3" r="1.3" fill="#f5fff5" opacity="0.95" />
+        <circle cx="-1.3" cy="-3" r="1.3" fill="#f5fff5" opacity="0.95" />
+        <circle cx="0" cy="-1.5" r="1.3" fill="#f5fff5" opacity="0.95" />
+        <circle cx="0" cy="-3" r="0.8" fill="#2bb35c" />
+      </g>
+    </g>
+  </g>\n`;
+}
+
+// 🌸 Level 3 Flower
+function drawFlower(cx, cy, delay, idx) {
+  const scale = 0.95;
+  const swayDur = (Math.random() * 0.6 + 2.1).toFixed(1);
+  const swayDel = (Math.random() * 2.0).toFixed(1);
+
+  return `  <g transform="translate(${cx}, ${cy})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <g style="animation: leaf-sway ${swayDur}s ease-in-out ${swayDel}s infinite alternate; transform-origin: 0px 5px; transform: scale(${scale});">
+        <!-- Stem -->
+        <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
+        <!-- Left Leaf -->
+        <path d="M 0 2 C -3 1, -4 -1, -5 -3 C -3 -3, -1 -1, 0 2 Z" fill="#2bb35c" />
+        <!-- Right Leaf -->
+        <path d="M 0 1 C 3 0, 4 -2, 5 -4 C 3 -4, 1 -2, 0 1 Z" fill="#2bb35c" />
+        <!-- Flower centered at (0, -3.5) -->
+        <g transform="translate(0, -3.5)">
+          <circle cx="0" cy="-2.2" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="-2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="-1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="0" cy="0" r="1.5" fill="#7bf099" />
+        </g>
+      </g>
+    </g>
+  </g>\n`;
+}
+
+// 🌺 Level 4 Cluster (Mini Garden Center)
+function drawCluster(cx, cy, delay, idx) {
+  const scale = 1.0;
+  const swayDur = (Math.random() * 0.5 + 1.8).toFixed(1);
+  const swayDel = (Math.random() * 2.0).toFixed(1);
+
+  return `  <g transform="translate(${cx}, ${cy})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <g style="animation: leaf-sway ${swayDur}s ease-in-out ${swayDel}s infinite alternate; transform-origin: 0px 5px; transform: scale(${scale});">
+        <!-- Stems -->
+        <path d="M 0 5 L -2 -3" stroke="#2bb35c" stroke-width="1.4" fill="none" />
+        <path d="M 0 2 Q 3 0, 4 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
+        
+        <!-- Leaves -->
+        <path d="M 0 2 C -3 1, -4 -1, -5 -3 C -3 -3, -1 -1, 0 2 Z" fill="#2bb35c" />
+        <path d="M -1 3 C -4 3, -5 5, -6 7 C -4 6, -2 4, -1 3 Z" fill="#2bb35c" />
+        <path d="M 2 1 C 4 0, 5 -1, 6 -3 C 5 -3, 3 -2, 2 1 Z" fill="#2bb35c" />
+        
+        <!-- Main Flower at (-2, -3) -->
+        <g transform="translate(-2, -3)">
+          <circle cx="0" cy="0" r="4.5" fill="none" stroke="#00ff88" stroke-width="0.4" stroke-dasharray="1.5 1.5" opacity="0.6" />
+          <g transform="scale(1.1)">
+            <circle cx="0" cy="-2.2" r="2.2" fill="#ffffff" opacity="0.95" />
+            <circle cx="2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+            <circle cx="-2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+            <circle cx="1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+            <circle cx="-1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+            <circle cx="0" cy="0" r="1.6" fill="#00ff88" />
+          </g>
+        </g>
+        
+        <!-- Second Flower at (4, -2) -->
+        <g transform="translate(4, -2) scale(0.8)">
+          <circle cx="0" cy="-2" r="2" fill="#f2fff2" opacity="0.95" />
+          <circle cx="2" cy="0" r="2" fill="#f2fff2" opacity="0.95" />
+          <circle cx="-2" cy="0" r="2" fill="#f2fff2" opacity="0.95" />
+          <circle cx="0" cy="2" r="2" fill="#f2fff2" opacity="0.95" />
+          <circle cx="0" cy="0" r="1.2" fill="#39d353" />
+        </g>
+      </g>
+    </g>
+  </g>\n`;
+}
+
+// 🌿 Connecting Branch for streaks
+function drawBranch(x1, y1, x2, y2, delay, idx) {
+  const isHorizontal = y1 === y2;
+  const bend = idx % 2 === 0 ? 2.0 : -2.0;
+  let pathD = '';
+  let leafD = '';
+  if (isHorizontal) {
+    pathD = `M 0 0 Q 6.5 ${bend} 13 0`;
+    leafD = `<path d="M 0 0 C -1 -2, 1 -4, 3 -3 C 3 -1, 1 -1, 0 0 Z" fill="#1b8545" transform="translate(6.5, ${bend / 2}) scale(0.7) rotate(${bend > 0 ? 35 : -35})" />`;
+  } else {
+    pathD = `M 0 0 Q ${bend} 6.5 0 13`;
+    leafD = `<path d="M 0 0 C -2 -1, -4 1, -3 3 C -1 3, -1 1, 0 0 Z" fill="#1b8545" transform="translate(${bend / 2}, 6.5) scale(0.7) rotate(${bend > 0 ? 55 : -55})" />`;
   }
   
-  let html = `  <g transform="translate(${cx}, ${cy})">
-    <g class="flower" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">\n`;
-  if (isSpecial) {
-    html += `      <circle cx="0" cy="0" r="${r * 1.7}" fill="none" stroke="#00ff88" stroke-width="0.5" stroke-dasharray="1.5 1.5" opacity="0.6" />\n`;
-  }
-  html += `      <circle cx="0" cy="${-r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
-  html += `      <circle cx="${r}" cy="${-r/3}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
-  html += `      <circle cx="${-r}" cy="${-r/3}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
-  html += `      <circle cx="${r/2}" cy="${r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
-  html += `      <circle cx="${-r/2}" cy="${r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
-  html += `      <circle cx="0" cy="0" r="${r * 0.7}" fill="${centerColor}" />\n`;
-  html += `    </g>\n  </g>\n`;
-  return html;
+  return `  <g transform="translate(${x1}, ${y1})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <path d="${pathD}" fill="none" stroke="#106b3e" stroke-width="1.0" opacity="0.6" />
+      ${leafD}
+    </g>
+  </g>\n`;
+}
+
+// ✨ Glowing sparkles for highly active clusters
+function drawSparkles(cx, cy, delay, idx) {
+  const sx1 = cx + (idx % 2 === 0 ? 8 : -8);
+  const sy1 = cy + (idx % 3 === 0 ? -6 : -10);
+  const sx2 = cx + (idx % 2 === 0 ? -9 : 9);
+  const sy2 = cy + (idx % 3 === 0 ? 9 : 6);
+  
+  const sparklePath1 = `M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z`;
+  const sparklePath2 = `M 0 -2 Q 0 0 2 0 Q 0 0 0 2 Q 0 0 -2 0 Q 0 0 0 -2 Z`;
+  
+  const del1 = (Math.random() * 1.5).toFixed(1);
+  const del2 = (Math.random() * 1.5).toFixed(1);
+
+  return `  <g transform="translate(${sx1}, ${sy1})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <path d="${sparklePath1}" fill="#ffffff" opacity="0" style="animation: sparkle-glow 1.5s ease-in-out ${del1}s infinite alternate; transform-origin: 0px 0px;" />
+    </g>
+  </g>
+  <g transform="translate(${sx2}, ${sy2})">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">
+      <path d="${sparklePath2}" fill="#00ff88" opacity="0" style="animation: sparkle-glow 1.8s ease-in-out ${del2}s infinite alternate; transform-origin: 0px 0px;" />
+    </g>
+  </g>\n`;
 }
 
 function parseAndGenerateSvg(html) {
@@ -140,46 +250,33 @@ function parseAndGenerateSvg(html) {
     }
   });
 
+  // Map coordinate indices for neighbor checks
+  const cellMap = {};
+  processedCells.forEach(c => {
+    cellMap[`${c.col},${c.row}`] = c;
+  });
+
   let activeCells = processedCells.filter(c => c.level > 0);
   
   if (activeCells.length === 0) {
-    console.log('No active contributions found. Creating a fallback vine path...');
-    const simulatedIndices = [5, 12, 18, 25, 32, 40, 48];
-    activeCells = simulatedIndices.map((col, idx) => {
-      const row = 2 + Math.sin(idx) * 2;
+    console.log('No active contributions found. Creating a simulated garden...');
+    // Fallback simulation to make it look active
+    const simulatedPairs = [[5,2], [5,3], [12,1], [12,2], [18,4], [18,5], [25,2], [26,2], [32,3], [40,2], [40,3], [41,3]];
+    activeCells = simulatedPairs.map(([col, row], idx) => {
+      const c = cellMap[`${col},${row}`] || { x: 35 + col * 13, y: 35 + row * 13 };
       return {
+        ...c,
         date: 'simulated',
-        level: 2,
+        level: (idx % 4) + 1,
         col,
-        row: Math.floor(row),
-        x: 35 + col * 13,
-        y: 35 + Math.floor(row) * 13
+        row
       };
     });
+    // Add them to the map for connections
+    activeCells.forEach(ac => {
+      cellMap[`${ac.col},${ac.row}`] = ac;
+    });
   }
-  
-  let pathD = '';
-  let totalLength = 0;
-  
-  if (activeCells.length > 0) {
-    pathD = `M ${activeCells[0].x} ${activeCells[0].y}`;
-    for (let i = 1; i < activeCells.length; i++) {
-      const p1 = activeCells[i - 1];
-      const p2 = activeCells[i];
-      const dx = p2.x - p1.x;
-      const dy = p2.y - p1.y;
-      totalLength += Math.sqrt(dx * dx + dy * dy);
-      
-      const cp1x = p1.x + dx / 2;
-      const cp1y = p1.y;
-      const cp2x = p1.x + dx / 2;
-      const cp2y = p2.y;
-      pathD += ` C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${p2.x} ${p2.y}`;
-    }
-  }
-  
-  if (totalLength === 0) totalLength = 100;
-  const animatedLength = Math.ceil(totalLength * 1.15);
 
   // Generate fireflies (forest green & yellow-green glows)
   let firefliesHtml = '';
@@ -187,12 +284,11 @@ function parseAndGenerateSvg(html) {
   for (let i = 0; i < numFireflies; i++) {
     const fx = Math.floor(Math.random() * 700) + 30;
     const fy = Math.floor(Math.random() * 90) + 30;
-    const fsize = (Math.random() * 1.4 + 0.6).toFixed(1);
+    const fsize = (Math.random() * 1.3 + 0.6).toFixed(1);
     const fdx = (Math.random() * 26 - 13).toFixed(1);
     const fdy = (Math.random() * 26 - 13).toFixed(1);
     const fdur = (Math.random() * 4 + 3.2).toFixed(1);
     const fdel = (Math.random() * 5.0).toFixed(1);
-    // Yellow-green firefly color
     const fcolor = i % 2 === 0 ? '#adff2f' : '#e8ffc2';
     
     firefliesHtml += `  <circle cx="${fx}" cy="${fy}" r="${fsize}" fill="${fcolor}" opacity="0.45" style="animation: firefly-float ${fdur}s ease-in-out ${fdel}s infinite; --dx: ${fdx}px; --dy: ${fdy}px;" />\n`;
@@ -226,15 +322,51 @@ function parseAndGenerateSvg(html) {
     cellsHtml += `  <rect x="${cell.x - 5}" y="${cell.y - 5}" width="10" height="10" rx="2" fill="${fillColor}" class="grid-cell" />\n`;
   });
 
-  // Leaves & Flowers
-  let leavesHtml = '';
-  let flowersHtml = '';
-  const totalActive = activeCells.length;
-  
+  // Cell-Independent Plants & Branches & Sparkles
+  let plantsHtml = '';
+  let branchesHtml = '';
+  let sparklesHtml = '';
+
   activeCells.forEach((cell, idx) => {
-    const delay = ((idx / totalActive) * 11.0).toFixed(2);
-    leavesHtml += drawLeaf(cell.x, cell.y, cell.level, idx);
-    flowersHtml += drawFlower(cell.x, cell.y, cell.level, idx, delay);
+    const delay = ((cell.col / 53) * 11.0).toFixed(2);
+    
+    // 1. Sprout/Bud/Flower/Cluster according to level
+    if (cell.level === 1) {
+      plantsHtml += drawSprout(cell.x, cell.y, delay, idx);
+    } else if (cell.level === 2) {
+      plantsHtml += drawBud(cell.x, cell.y, delay, idx);
+    } else if (cell.level === 3) {
+      plantsHtml += drawFlower(cell.x, cell.y, delay, idx);
+    } else if (cell.level === 4) {
+      plantsHtml += drawCluster(cell.x, cell.y, delay, idx);
+    }
+
+    // 2. Streak branch connections: check Right (col + 1, row) and Down (col, row + 1)
+    const rightNeighbor = cellMap[`${cell.col + 1},${cell.row}`];
+    if (rightNeighbor && rightNeighbor.level > 0) {
+      branchesHtml += drawBranch(cell.x, cell.y, rightNeighbor.x, rightNeighbor.y, delay, idx);
+    }
+
+    const downNeighbor = cellMap[`${cell.col},${cell.row + 1}`];
+    if (downNeighbor && downNeighbor.level > 0) {
+      branchesHtml += drawBranch(cell.x, cell.y, downNeighbor.x, downNeighbor.y, delay, idx);
+    }
+
+    // 3. Cluster detections: count 4-way neighbors
+    let neighborCount = 0;
+    const upN = cellMap[`${cell.col},${cell.row - 1}`];
+    const downN = cellMap[`${cell.col},${cell.row + 1}`];
+    const leftN = cellMap[`${cell.col - 1},${cell.row}`];
+    const rightN = cellMap[`${cell.col + 1},${cell.row}`];
+
+    if (upN && upN.level > 0) neighborCount++;
+    if (downN && downN.level > 0) neighborCount++;
+    if (leftN && leftN.level > 0) neighborCount++;
+    if (rightN && rightN.level > 0) neighborCount++;
+
+    if (neighborCount >= 3) {
+      sparklesHtml += drawSparkles(cell.x, cell.y, delay, idx);
+    }
   });
 
   let monthLabelsHtml = '';
@@ -255,13 +387,6 @@ function parseAndGenerateSvg(html) {
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#090d16" />
-    </linearGradient>
-    
-    <!-- Vine gradient (forest green to emerald to mint) -->
-    <linearGradient id="vine-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#106b3e" />
-      <stop offset="60%" stop-color="#2bb35c" />
-      <stop offset="100%" stop-color="#00ff88" />
     </linearGradient>
     
     <!-- Glassmorphic glow filter -->
@@ -291,32 +416,17 @@ function parseAndGenerateSvg(html) {
       letter-spacing: 0.8px;
     }
     .grid-cell {
-      opacity: 0.9;
+      opacity: 0.8;
     }
-    .vine-path {
-      stroke-dasharray: ${animatedLength};
-      stroke-dashoffset: ${animatedLength};
-      animation: vine-grow-key 15s ease-in-out infinite;
-      filter: url(#glow);
-      opacity: 0.9;
-    }
-    .flower {
+    .garden-plant {
       transform: scale(0);
       opacity: 0;
-    }
-
-    @keyframes vine-grow-key {
-      0% { stroke-dashoffset: ${animatedLength}; }
-      75% { stroke-dashoffset: 0; }
-      90% { stroke-dashoffset: 0; opacity: 0.9; }
-      95% { stroke-dashoffset: 0; opacity: 0; }
-      100% { stroke-dashoffset: ${animatedLength}; opacity: 0; }
     }
 
     @keyframes bloom-key {
       0% { transform: scale(0); opacity: 0; }
       1.5% { transform: scale(0); opacity: 0; }
-      5% { transform: scale(1.3); opacity: 1; }
+      6% { transform: scale(1.15); opacity: 1; }
       9% { transform: scale(1); opacity: 1; }
       75% { transform: scale(1); opacity: 1; }
       90% { transform: scale(1); opacity: 1; }
@@ -325,8 +435,13 @@ function parseAndGenerateSvg(html) {
     }
 
     @keyframes leaf-sway {
-      0% { transform: rotate(-6deg); }
+      0% { transform: rotate(-5deg); }
       100% { transform: rotate(8deg); }
+    }
+
+    @keyframes sparkle-glow {
+      0% { opacity: 0.2; transform: scale(0.85); }
+      100% { opacity: 0.95; transform: scale(1.15); }
     }
 
     @keyframes firefly-float {
@@ -357,14 +472,14 @@ function parseAndGenerateSvg(html) {
   <!-- Calendar Heatmap Grid -->
 ${cellsHtml}
 
-  <!-- Animated Contribution Vine -->
-  <path d="${pathD}" fill="none" stroke="url(#vine-grad)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" class="vine-path" />
+  <!-- Connecting Branches (Streaks) -->
+${branchesHtml}
 
-  <!-- Soft Swaying Leaves -->
-${leavesHtml}
+  <!-- Vegetation Growth (Sprouts, Buds, Flowers, Clusters) -->
+${plantsHtml}
 
-  <!-- Blooming Flowers -->
-${flowersHtml}
+  <!-- Sparkles near Lush Clusters -->
+${sparklesHtml}
 
   <!-- Falling Petals -->
 ${petalsHtml}
