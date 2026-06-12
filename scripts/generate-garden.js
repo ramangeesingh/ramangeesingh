@@ -2,12 +2,10 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-// Target username
 const username = 'ramangeesingh';
 const outputDir = path.join(__dirname, '..', 'assets');
-const outputPath = path.join(outputDir, 'contribution-vine.svg');
+const outputPath = path.join(outputDir, 'contribution-garden.svg');
 
-// Create assets directory if it doesn't exist
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
@@ -30,8 +28,61 @@ https.get(`https://github.com/users/${username}/contributions`, (res) => {
   process.exit(1);
 });
 
+function drawLeaf(cx, cy, level, idx) {
+  const scale = (0.55 + level * 0.18).toFixed(2);
+  const rotate = (idx * 68) % 360;
+  // Offset to grow out from the active cell sides
+  const ox = cx + (idx % 2 === 0 ? 5 : -5);
+  const oy = cy + (idx % 3 === 0 ? 5 : -5);
+  const dur = (Math.random() * 2.5 + 2.0).toFixed(1);
+  const del = (Math.random() * 3.5).toFixed(1);
+  
+  return `  <g transform="translate(${ox}, ${oy}) scale(${scale})">
+    <path d="M 0 0 C -3 -3, -1 -8, 4 -9 C 5 -6, 4 -2, 0 0 Z" fill="#2bb35c" opacity="0.8" style="animation: leaf-sway ${dur}s ease-in-out ${del}s infinite alternate; transform-origin: 0px 0px;" />
+  </g>\n`;
+}
+
+function drawFlower(cx, cy, level, idx, delay) {
+  let r = 2;
+  let petalColor = '#f2fff2'; // Honeydew / white
+  let centerColor = '#39d353'; // Emerald center
+  let isSpecial = false;
+  
+  if (level === 1) {
+    r = 1.6;
+    petalColor = '#e0fae0'; // Very pale green
+    centerColor = '#106b3e';
+  } else if (level === 2) {
+    r = 2.4;
+    petalColor = '#f5fff5'; // Light sage-white
+    centerColor = '#2bb35c';
+  } else if (level === 3) {
+    r = 3.2;
+    petalColor = '#ffffff'; // White
+    centerColor = '#7bf099'; // Glowing pale green center
+  } else if (level === 4) {
+    r = 4.0;
+    petalColor = '#ffffff'; // Pure white
+    centerColor = '#00ff88'; // Glowing neon emerald center
+    isSpecial = true;
+  }
+  
+  let html = `  <g transform="translate(${cx}, ${cy})">
+    <g class="flower" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: 0px 0px;">\n`;
+  if (isSpecial) {
+    html += `      <circle cx="0" cy="0" r="${r * 1.7}" fill="none" stroke="#00ff88" stroke-width="0.5" stroke-dasharray="1.5 1.5" opacity="0.6" />\n`;
+  }
+  html += `      <circle cx="0" cy="${-r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
+  html += `      <circle cx="${r}" cy="${-r/3}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
+  html += `      <circle cx="${-r}" cy="${-r/3}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
+  html += `      <circle cx="${r/2}" cy="${r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
+  html += `      <circle cx="${-r/2}" cy="${r}" r="${r}" fill="${petalColor}" opacity="0.95" />\n`;
+  html += `      <circle cx="0" cy="0" r="${r * 0.7}" fill="${centerColor}" />\n`;
+  html += `    </g>\n  </g>\n`;
+  return html;
+}
+
 function parseAndGenerateSvg(html) {
-  // Regex to extract calendar days
   const cellRegex = /<td[^>]*class="[^"]*ContributionCalendar-day[^"]*"[^>]*>/g;
   const dateRegex = /data-date="([^"]+)"/;
   const levelRegex = /data-level="([^"]+)"/;
@@ -54,22 +105,17 @@ function parseAndGenerateSvg(html) {
     throw new Error('Failed to parse contribution calendar days from HTML');
   }
   
-  // Sort chronologically
   cells.sort((a, b) => a.date.localeCompare(b.date));
-  
   const minDateStr = cells[0].date;
   const minDate = new Date(minDateStr + 'T00:00:00');
   
-  // Map cells to coordinate grid
   const processedCells = cells.map(cell => {
     const currentDate = new Date(cell.date + 'T00:00:00');
     const diffTime = currentDate - minDate;
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
     const col = Math.floor(diffDays / 7);
-    const row = currentDate.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const row = currentDate.getDay();
     
-    // Grid alignment: x-spacing is 13px, y-spacing is 13px
-    // Padding left: 35, Padding top: 35
     return {
       ...cell,
       col,
@@ -79,14 +125,12 @@ function parseAndGenerateSvg(html) {
     };
   });
   
-  // Extract month labels
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const monthLabels = [];
   let lastMonth = -1;
   processedCells.forEach(cell => {
     const date = new Date(cell.date + 'T00:00:00');
     const m = date.getMonth();
-    // Only place label when month changes and it's Sunday (row === 0) to align with columns
     if (m !== lastMonth && cell.row === 0) {
       monthLabels.push({
         text: months[m],
@@ -96,10 +140,8 @@ function parseAndGenerateSvg(html) {
     }
   });
 
-  // Collect active cells for the vine path
   let activeCells = processedCells.filter(c => c.level > 0);
   
-  // Fallback: If 0 contributions, simulate a simple vine path wave to keep it beautiful
   if (activeCells.length === 0) {
     console.log('No active contributions found. Creating a fallback vine path...');
     const simulatedIndices = [5, 12, 18, 25, 32, 40, 48];
@@ -116,7 +158,6 @@ function parseAndGenerateSvg(html) {
     });
   }
   
-  // Build vine SVG path
   let pathD = '';
   let totalLength = 0;
   
@@ -127,11 +168,8 @@ function parseAndGenerateSvg(html) {
       const p2 = activeCells[i];
       const dx = p2.x - p1.x;
       const dy = p2.y - p1.y;
-      
-      // Calculate straight line distance for dasharray animation
       totalLength += Math.sqrt(dx * dx + dy * dy);
       
-      // Draw a smooth S-curve between points
       const cp1x = p1.x + dx / 2;
       const cp1y = p1.y;
       const cp2x = p1.x + dx / 2;
@@ -140,138 +178,95 @@ function parseAndGenerateSvg(html) {
     }
   }
   
-  // Prevent zero division
   if (totalLength === 0) totalLength = 100;
-  // Add 10% buffer to dasharray length for bezier curve elongation
   const animatedLength = Math.ceil(totalLength * 1.15);
 
-  // Generate fireflies
+  // Generate fireflies (forest green & yellow-green glows)
   let firefliesHtml = '';
-  const numFireflies = 25;
+  const numFireflies = 28;
   for (let i = 0; i < numFireflies; i++) {
     const fx = Math.floor(Math.random() * 700) + 30;
     const fy = Math.floor(Math.random() * 90) + 30;
-    const fsize = (Math.random() * 1.5 + 0.5).toFixed(1);
-    const fdx = (Math.random() * 30 - 15).toFixed(1);
-    const fdy = (Math.random() * 30 - 15).toFixed(1);
-    const fdur = (Math.random() * 4 + 3).toFixed(1);
-    const fdel = (Math.random() * 5).toFixed(1);
+    const fsize = (Math.random() * 1.4 + 0.6).toFixed(1);
+    const fdx = (Math.random() * 26 - 13).toFixed(1);
+    const fdy = (Math.random() * 26 - 13).toFixed(1);
+    const fdur = (Math.random() * 4 + 3.2).toFixed(1);
+    const fdel = (Math.random() * 5.0).toFixed(1);
+    // Yellow-green firefly color
+    const fcolor = i % 2 === 0 ? '#adff2f' : '#e8ffc2';
     
-    firefliesHtml += `  <circle cx="${fx}" cy="${fy}" r="${fsize}" fill="#ffb7d5" opacity="0.4" style="animation: firefly-float ${fdur}s ease-in-out ${fdel}s infinite; --dx: ${fdx}px; --dy: ${fdy}px;" />\n`;
+    firefliesHtml += `  <circle cx="${fx}" cy="${fy}" r="${fsize}" fill="${fcolor}" opacity="0.45" style="animation: firefly-float ${fdur}s ease-in-out ${fdel}s infinite; --dx: ${fdx}px; --dy: ${fdy}px;" />\n`;
   }
 
-  // Generate falling petals
+  // Generate falling green/white petals
   let petalsHtml = '';
-  const numPetals = 15;
+  const numPetals = 16;
   for (let i = 0; i < numPetals; i++) {
-    // Start falling from near one of the active cells
     const randomActive = activeCells[Math.floor(Math.random() * activeCells.length)];
     const px = randomActive.x + Math.floor(Math.random() * 20 - 10);
     const py = randomActive.y;
-    const pdx = (Math.random() * 40 - 20).toFixed(1);
+    const pdx = (Math.random() * 36 - 18).toFixed(1);
     const prot = Math.floor(Math.random() * 360);
-    const pdur = (Math.random() * 5 + 4).toFixed(1);
-    const pdel = (Math.random() * 10).toFixed(1);
+    const pdur = (Math.random() * 4.5 + 4.0).toFixed(1);
+    const pdel = (Math.random() * 8.5).toFixed(1);
+    const pcolor = i % 2 === 0 ? '#ffffff' : '#d0ffd0';
     
-    // Small leaf/petal path
-    petalsHtml += `  <path d="M ${px} ${py} c -2 -4, 2 -8, 4 -4 c 2 4, -2 8, -4 4" fill="#ffb7d5" opacity="0" style="animation: petal-fall ${pdur}s ease-in-out ${pdel}s infinite; --fdx: ${pdx}px; --frot: ${prot}deg; transform-origin: ${px}px ${py}px;" />\n`;
+    petalsHtml += `  <path d="M ${px} ${py} c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="${pcolor}" opacity="0" style="animation: petal-fall ${pdur}s ease-in-out ${pdel}s infinite; --fdx: ${pdx}px; --frot: ${prot}deg; transform-origin: ${px}px ${py}px;" />\n`;
   }
 
-  // Render contribution cells XML
+  // Render contribution cells (GitHub dark mode colors)
   let cellsHtml = '';
   processedCells.forEach(cell => {
-    // Custom theme: dark violet-black for empty, pinks/purples for active
-    let fillColor = '#140f22'; // Level 0
-    if (cell.level === 1) fillColor = '#3d1b54';
-    else if (cell.level === 2) fillColor = '#6c2b8a';
-    else if (cell.level === 3) fillColor = '#a84cb0';
-    else if (cell.level === 4) fillColor = '#ff63b1';
+    let fillColor = '#161b22'; // Level 0
+    if (cell.level === 1) fillColor = '#0e4429';
+    else if (cell.level === 2) fillColor = '#006d32';
+    else if (cell.level === 3) fillColor = '#26a641';
+    else if (cell.level === 4) fillColor = '#39d353';
     
-    cellsHtml += `  <rect x="${cell.x - 5}" y="${cell.y - 5}" width="10" height="10" rx="2.5" ry="2.5" fill="${fillColor}" class="grid-cell" />\n`;
+    cellsHtml += `  <rect x="${cell.x - 5}" y="${cell.y - 5}" width="10" height="10" rx="2" fill="${fillColor}" class="grid-cell" />\n`;
   });
 
-  // Render month labels XML
+  // Leaves & Flowers
+  let leavesHtml = '';
+  let flowersHtml = '';
+  const totalActive = activeCells.length;
+  
+  activeCells.forEach((cell, idx) => {
+    const delay = ((idx / totalActive) * 11.0).toFixed(2);
+    leavesHtml += drawLeaf(cell.x, cell.y, cell.level, idx);
+    flowersHtml += drawFlower(cell.x, cell.y, cell.level, idx, delay);
+  });
+
   let monthLabelsHtml = '';
   monthLabels.forEach(label => {
     monthLabelsHtml += `  <text x="${label.x}" y="22" class="label">${label.text}</text>\n`;
   });
 
-  // Render day labels (M, W, F)
   const dayLabelsHtml = `
     <text x="18" y="52" class="label" text-anchor="middle">M</text>
     <text x="18" y="78" class="label" text-anchor="middle">W</text>
     <text x="18" y="104" class="label" text-anchor="middle">F</text>
   `;
 
-  // Render flowers XML
-  let flowersHtml = '';
-  const totalActive = activeCells.length;
-  activeCells.forEach((cell, idx) => {
-    const delay = ((idx / totalActive) * 11.2).toFixed(2); // Leave some buffer at the end of the 15s loop
-    
-    // Choose size and colors based on contribution level
-    let r = 2; // Petal radius
-    let petalColor = '#e6b2e6';
-    let centerColor = '#ffffff';
-    let isSpecial = false;
-    
-    if (cell.level === 1) {
-      r = 1.8;
-      petalColor = '#b382d9'; // Lavender
-      centerColor = '#ffcce6';
-    } else if (cell.level === 2) {
-      r = 2.6;
-      petalColor = '#ff99cc'; // Sakura pink
-      centerColor = '#ffe6ff';
-    } else if (cell.level === 3) {
-      r = 3.4;
-      petalColor = '#ff66b2'; // Rich pink
-      centerColor = '#fff066'; // Glowing yellow center
-    } else if (cell.level === 4) {
-      r = 4.2;
-      petalColor = '#ff3399'; // Bright magenta-pink
-      centerColor = '#ffffff';
-      isSpecial = true;
-    }
-    
-    const cx = cell.x;
-    const cy = cell.y;
-    
-    flowersHtml += `  <g class="flower" style="animation: bloom-key 15s infinite; animation-delay: ${delay}s; transform-origin: ${cx}px ${cy}px;">\n`;
-    if (isSpecial) {
-      // Draw extra glowing ring behind level 4 blossoms
-      flowersHtml += `    <circle cx="${cx}" cy="${cy}" r="${r * 1.8}" fill="none" stroke="#ff80bf" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.6" />\n`;
-    }
-    // 5-Petal Flower geometry
-    flowersHtml += `    <circle cx="${cx}" cy="${cy - r}" r="${r}" fill="${petalColor}" opacity="0.9" />\n`;
-    flowersHtml += `    <circle cx="${cx + r}" cy="${cy - r/3}" r="${r}" fill="${petalColor}" opacity="0.9" />\n`;
-    flowersHtml += `    <circle cx="${cx - r}" cy="${cy - r/3}" r="${r}" fill="${petalColor}" opacity="0.9" />\n`;
-    flowersHtml += `    <circle cx="${cx + r/2}" cy="${cy + r}" r="${r}" fill="${petalColor}" opacity="0.9" />\n`;
-    flowersHtml += `    <circle cx="${cx - r/2}" cy="${cy + r}" r="${r}" fill="${petalColor}" opacity="0.9" />\n`;
-    flowersHtml += `    <circle cx="${cx}" cy="${cy}" r="${r * 0.7}" fill="${centerColor}" />\n`;
-    flowersHtml += `  </g>\n`;
-  });
-
-  // Full SVG content
   const svgContent = `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 150" width="100%" height="150">
   <defs>
-    <!-- Dark elegant card styling -->
+    <!-- Dark elegant card styling (GitHub themed) -->
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0712" />
-      <stop offset="100%" stop-color="#120c22" />
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
     
-    <!-- Vine gradient (purple to lavender) -->
+    <!-- Vine gradient (forest green to emerald to mint) -->
     <linearGradient id="vine-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8a2be2" />
-      <stop offset="50%" stop-color="#d87093" />
-      <stop offset="100%" stop-color="#ff69b4" />
+      <stop offset="0%" stop-color="#106b3e" />
+      <stop offset="60%" stop-color="#2bb35c" />
+      <stop offset="100%" stop-color="#00ff88" />
     </linearGradient>
     
     <!-- Glassmorphic glow filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feGaussianBlur stdDeviation="2.2" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -281,22 +276,22 @@ function parseAndGenerateSvg(html) {
 
   <style>
     .bg { fill: url(#card-grad); }
-    .border { stroke: #2a1c44; stroke-width: 1.5; fill: none; }
+    .border { stroke: #21262d; stroke-width: 1.5; fill: none; }
     .label {
-      fill: #8f85a8;
+      fill: #8b949e;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 9px;
       font-weight: 500;
     }
     .title {
-      fill: #ffb7d5;
+      fill: #26a641;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.8px;
     }
     .grid-cell {
-      opacity: 0.85;
+      opacity: 0.9;
     }
     .vine-path {
       stroke-dasharray: ${animatedLength};
@@ -321,7 +316,7 @@ function parseAndGenerateSvg(html) {
     @keyframes bloom-key {
       0% { transform: scale(0); opacity: 0; }
       1.5% { transform: scale(0); opacity: 0; }
-      5% { transform: scale(1.4); opacity: 1; }
+      5% { transform: scale(1.3); opacity: 1; }
       9% { transform: scale(1); opacity: 1; }
       75% { transform: scale(1); opacity: 1; }
       90% { transform: scale(1); opacity: 1; }
@@ -329,15 +324,20 @@ function parseAndGenerateSvg(html) {
       100% { transform: scale(0); opacity: 0; }
     }
 
+    @keyframes leaf-sway {
+      0% { transform: rotate(-6deg); }
+      100% { transform: rotate(8deg); }
+    }
+
     @keyframes firefly-float {
-      0%, 100% { transform: translate(0, 0); opacity: 0.2; }
+      0%, 100% { transform: translate(0, 0); opacity: 0.25; }
       50% { transform: translate(var(--dx), var(--dy)); opacity: 0.95; }
     }
 
     @keyframes petal-fall {
       0% { transform: translate(0, -10px) rotate(0deg); opacity: 0; }
-      10% { opacity: 0.75; }
-      85% { opacity: 0.75; }
+      10% { opacity: 0.7; }
+      85% { opacity: 0.7; }
       95% { transform: translate(var(--fdx), 45px) rotate(var(--frot)); opacity: 0; }
       100% { transform: translate(var(--fdx), 45px) rotate(var(--frot)); opacity: 0; }
     }
@@ -348,7 +348,7 @@ function parseAndGenerateSvg(html) {
   <rect width="758.5" height="148.5" x="0.75" y="0.75" rx="11.25" class="border" />
 
   <!-- Header Title -->
-  <text x="35" y="22" class="title">✨ EVERY CONTRIBUTION HELPS THE GARDEN GROW</text>
+  <text x="35" y="22" class="title">🌿 CONTRIBUTION GARDEN</text>
 
   <!-- Day and Month Labels -->
   ${monthLabelsHtml}
@@ -358,7 +358,10 @@ function parseAndGenerateSvg(html) {
 ${cellsHtml}
 
   <!-- Animated Contribution Vine -->
-  <path d="${pathD}" fill="none" stroke="url(#vine-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="vine-path" />
+  <path d="${pathD}" fill="none" stroke="url(#vine-grad)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" class="vine-path" />
+
+  <!-- Soft Swaying Leaves -->
+${leavesHtml}
 
   <!-- Blooming Flowers -->
 ${flowersHtml}
@@ -372,5 +375,5 @@ ${firefliesHtml}
 `;
 
   fs.writeFileSync(outputPath, svgContent, 'utf8');
-  console.log(`Successfully generated Contribution Vine SVG at ${outputPath}!`);
+  console.log(`Successfully generated Contribution Garden SVG at ${outputPath}!`);
 }

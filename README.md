@@ -82,10 +82,13 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 
 ---
 
-### 🌸 Contribution Garden
+### 🌿 Contribution Garden
 
 <div align="center">
-  <img src="assets/contribution-vine.svg" alt="Ramangee's Contribution Vine" width="100%" />
+  <p><em>"Every contribution helps the garden grow."</em></p>
+  <img src="assets/contribution-garden.svg" alt="Contribution Garden" width="100%" />
+  <br />
+  <sub>"Consistency is the seed. Discipline is the water. Growth is inevitable."</sub>
 </div>
 
 ---

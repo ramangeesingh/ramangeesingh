@@ -26,7 +26,7 @@ jobs:
 
       - name: Generate Custom SVG Assets
         run: |
-          node scripts/generate-vine.js
+          node scripts/generate-garden.js
           node scripts/generate-languages.js
           node scripts/generate-achievements.js
           node scripts/generate-projects.js
@@ -35,6 +35,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/contribution-vine.svg assets/most-used-languages.svg assets/achievements.svg assets/projects.svg
+          git add assets/contribution-garden.svg assets/most-used-languages.svg assets/achievements.svg assets/projects.svg
           git diff-index --quiet HEAD || git commit -m "Update profile SVG assets [skip ci]"
           git push
