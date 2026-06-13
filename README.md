@@ -85,10 +85,8 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 ### 🌿 Contribution Garden
 
 <div align="center">
-  <p><em>"Every contribution helps the garden grow."</em></p>
+  <p><em>"Every commit seeds a new bloom."</em></p>
   <img src="assets/contribution-garden.svg" alt="Contribution Garden" width="100%" />
-  <br />
-  <sub>"Consistency is the seed. Discipline is the water. Growth is inevitable."</sub>
 </div>
 
 ---
