@@ -85,8 +85,8 @@ I am a B.Tech Computer Science and Engineering student entering my 5th semester.
 ### 🌿 Contribution Garden
 
 <div align="center">
-  <p><em>"Every commit seeds a new bloom."</em></p>
-  <img src="assets/contribution-garden.svg" alt="Contribution Garden" width="100%" />
+  <p><em>"Every commit leaves a trail."</em></p>
+  <img src="https://raw.githubusercontent.com/ramangeesingh/ramangeesingh/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" width="100%" />
 </div>
 
 ---
