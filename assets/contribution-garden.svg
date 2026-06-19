@@ -474,6 +474,7 @@
   <rect x="706" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="706" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="706" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="706" y="95" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
 
 
   <!-- Connecting Branches (Streaks) -->
@@ -561,12 +562,18 @@
       <path d="M 0 0 C -1 -2, 1 -4, 3 -3 C 3 -1, 1 -1, 0 0 Z" fill="#1b8545" transform="translate(6.5, 1) scale(0.7) rotate(35)" />
     </g>
   </g>
+  <g transform="translate(698, 100)">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.58s; transform-origin: 0px 0px;">
+      <path d="M 0 0 Q 6.5 2 13 0" fill="none" stroke="#106b3e" stroke-width="1.0" opacity="0.6" />
+      <path d="M 0 0 C -1 -2, 1 -4, 3 -3 C 3 -1, 1 -1, 0 0 Z" fill="#1b8545" transform="translate(6.5, 1) scale(0.7) rotate(35)" />
+    </g>
+  </g>
 
 
   <!-- Vegetation Growth (Sprouts, Buds, Flowers, Clusters) -->
   <g transform="translate(113, 74)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 1.25s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.3s ease-in-out 0.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+      <g style="animation: leaf-sway 2.5s ease-in-out 0.3s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
         <!-- Left Leaf -->
@@ -587,7 +594,7 @@
   </g>
   <g transform="translate(230, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 3.11s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.6s ease-in-out 2.0s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+      <g style="animation: leaf-sway 2.6s ease-in-out 1.7s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
         <!-- Left Leaf -->
@@ -608,7 +615,7 @@
   </g>
   <g transform="translate(230, 74)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 3.11s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.5s ease-in-out 0.7s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.2s ease-in-out 1.7s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -620,7 +627,7 @@
   </g>
   <g transform="translate(243, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 3.32s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.6s ease-in-out 0.9s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
+      <g style="animation: leaf-sway 2.8s ease-in-out 1.7s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
         <!-- Leaf -->
@@ -636,7 +643,7 @@
   </g>
   <g transform="translate(438, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 6.43s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.4s ease-in-out 1.9s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.0s ease-in-out 1.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -648,7 +655,7 @@
   </g>
   <g transform="translate(607, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 9.13s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.0s ease-in-out 1.2s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.3s ease-in-out 1.0s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -660,7 +667,7 @@
   </g>
   <g transform="translate(659, 48)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 9.96s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.8s ease-in-out 1.9s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.2s ease-in-out 1.6s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -672,7 +679,7 @@
   </g>
   <g transform="translate(659, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 9.96s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.4s ease-in-out 0.2s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.2s ease-in-out 1.9s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -684,7 +691,7 @@
   </g>
   <g transform="translate(659, 100)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 9.96s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.1s ease-in-out 1.9s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
+      <g style="animation: leaf-sway 3.0s ease-in-out 1.4s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
         <!-- Leaf -->
@@ -700,7 +707,7 @@
   </g>
   <g transform="translate(659, 113)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 9.96s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.1s ease-in-out 0.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
+      <g style="animation: leaf-sway 2.4s ease-in-out 1.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
         <!-- Leaf -->
@@ -716,7 +723,7 @@
   </g>
   <g transform="translate(672, 48)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.0s ease-in-out 1.5s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
+      <g style="animation: leaf-sway 2.1s ease-in-out 0.1s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
         <!-- Stems -->
         <path d="M 0 5 L -2 -3" stroke="#2bb35c" stroke-width="1.4" fill="none" />
         <path d="M 0 2 Q 3 0, 4 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
@@ -752,7 +759,7 @@
   </g>
   <g transform="translate(672, 74)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.1s ease-in-out 0.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+      <g style="animation: leaf-sway 2.5s ease-in-out 1.4s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
         <!-- Left Leaf -->
@@ -773,7 +780,7 @@
   </g>
   <g transform="translate(672, 100)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.8s ease-in-out 1.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 2.7s ease-in-out 1.4s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -785,7 +792,7 @@
   </g>
   <g transform="translate(672, 113)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.5s ease-in-out 0.6s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.3s ease-in-out 0.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -797,7 +804,7 @@
   </g>
   <g transform="translate(685, 48)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.3s ease-in-out 1.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.0s ease-in-out 0.2s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -809,7 +816,7 @@
   </g>
   <g transform="translate(685, 61)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 3.3s ease-in-out 0.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
+      <g style="animation: leaf-sway 3.5s ease-in-out 0.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.85);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -1" stroke="#2bb35c" stroke-width="1.0" fill="none" />
         <!-- Left Leaf -->
@@ -821,7 +828,7 @@
   </g>
   <g transform="translate(685, 74)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.9s ease-in-out 1.0s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
+      <g style="animation: leaf-sway 2.4s ease-in-out 0.3s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
         <!-- Leaf -->
@@ -837,7 +844,7 @@
   </g>
   <g transform="translate(685, 113)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 1.9s ease-in-out 1.3s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
+      <g style="animation: leaf-sway 2.1s ease-in-out 0.0s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
         <!-- Stems -->
         <path d="M 0 5 L -2 -3" stroke="#2bb35c" stroke-width="1.4" fill="none" />
         <path d="M 0 2 Q 3 0, 4 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
@@ -873,7 +880,7 @@
   </g>
   <g transform="translate(698, 35)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.58s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.8s ease-in-out 1.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
+      <g style="animation: leaf-sway 3.1s ease-in-out 1.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.9);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
         <!-- Leaf -->
@@ -889,7 +896,7 @@
   </g>
   <g transform="translate(698, 74)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.58s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.5s ease-in-out 1.0s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+      <g style="animation: leaf-sway 2.3s ease-in-out 0.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
         <!-- Left Leaf -->
@@ -910,7 +917,7 @@
   </g>
   <g transform="translate(698, 100)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.58s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 1.9s ease-in-out 0.9s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
+      <g style="animation: leaf-sway 1.9s ease-in-out 1.0s infinite alternate; transform-origin: 0px 5px; transform: scale(1);">
         <!-- Stems -->
         <path d="M 0 5 L -2 -3" stroke="#2bb35c" stroke-width="1.4" fill="none" />
         <path d="M 0 2 Q 3 0, 4 -2" stroke="#2bb35c" stroke-width="1.2" fill="none" />
@@ -946,7 +953,28 @@
   </g>
   <g transform="translate(711, 48)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.79s; transform-origin: 0px 0px;">
-      <g style="animation: leaf-sway 2.6s ease-in-out 0.5s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+      <g style="animation: leaf-sway 2.4s ease-in-out 1.2s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
+        <!-- Stem -->
+        <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
+        <!-- Left Leaf -->
+        <path d="M 0 2 C -3 1, -4 -1, -5 -3 C -3 -3, -1 -1, 0 2 Z" fill="#2bb35c" />
+        <!-- Right Leaf -->
+        <path d="M 0 1 C 3 0, 4 -2, 5 -4 C 3 -4, 1 -2, 0 1 Z" fill="#2bb35c" />
+        <!-- Flower centered at (0, -3.5) -->
+        <g transform="translate(0, -3.5)">
+          <circle cx="0" cy="-2.2" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="-2.2" cy="-0.7" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="-1.3" cy="1.6" r="2.2" fill="#ffffff" opacity="0.95" />
+          <circle cx="0" cy="0" r="1.5" fill="#7bf099" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(711, 100)">
+    <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.79s; transform-origin: 0px 0px;">
+      <g style="animation: leaf-sway 2.3s ease-in-out 1.8s infinite alternate; transform-origin: 0px 5px; transform: scale(0.95);">
         <!-- Stem -->
         <path d="M 0 5 L 0 -3" stroke="#2bb35c" stroke-width="1.3" fill="none" />
         <!-- Left Leaf -->
@@ -970,73 +998,73 @@
   <!-- Sparkles near Lush Clusters -->
   <g transform="translate(664, 103)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <path d="M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z" fill="#ffffff" opacity="0" style="animation: sparkle-glow 1.5s ease-in-out 0.9s infinite alternate; transform-origin: 0px 0px;" />
+      <path d="M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z" fill="#ffffff" opacity="0" style="animation: sparkle-glow 1.5s ease-in-out 1.3s infinite alternate; transform-origin: 0px 0px;" />
     </g>
   </g>
   <g transform="translate(681, 119)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.17s; transform-origin: 0px 0px;">
-      <path d="M 0 -2 Q 0 0 2 0 Q 0 0 0 2 Q 0 0 -2 0 Q 0 0 0 -2 Z" fill="#00ff88" opacity="0" style="animation: sparkle-glow 1.8s ease-in-out 1.2s infinite alternate; transform-origin: 0px 0px;" />
+      <path d="M 0 -2 Q 0 0 2 0 Q 0 0 0 2 Q 0 0 -2 0 Q 0 0 0 -2 Z" fill="#00ff88" opacity="0" style="animation: sparkle-glow 1.8s ease-in-out 1.0s infinite alternate; transform-origin: 0px 0px;" />
     </g>
   </g>
   <g transform="translate(693, 64)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <path d="M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z" fill="#ffffff" opacity="0" style="animation: sparkle-glow 1.5s ease-in-out 0.9s infinite alternate; transform-origin: 0px 0px;" />
+      <path d="M 0 -3 Q 0 0 3 0 Q 0 0 0 3 Q 0 0 -3 0 Q 0 0 0 -3 Z" fill="#ffffff" opacity="0" style="animation: sparkle-glow 1.5s ease-in-out 1.4s infinite alternate; transform-origin: 0px 0px;" />
     </g>
   </g>
   <g transform="translate(676, 80)">
     <g class="garden-plant" style="animation: bloom-key 15s infinite; animation-delay: 10.38s; transform-origin: 0px 0px;">
-      <path d="M 0 -2 Q 0 0 2 0 Q 0 0 0 2 Q 0 0 -2 0 Q 0 0 0 -2 Z" fill="#00ff88" opacity="0" style="animation: sparkle-glow 1.8s ease-in-out 0.3s infinite alternate; transform-origin: 0px 0px;" />
+      <path d="M 0 -2 Q 0 0 2 0 Q 0 0 0 2 Q 0 0 -2 0 Q 0 0 0 -2 Z" fill="#00ff88" opacity="0" style="animation: sparkle-glow 1.8s ease-in-out 1.0s infinite alternate; transform-origin: 0px 0px;" />
     </g>
   </g>
 
 
   <!-- Falling Petals -->
-  <path d="M 606 61 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 4.5s ease-in-out 5.0s infinite; --fdx: 1.8px; --frot: 297deg; transform-origin: 606px 61px;" />
-  <path d="M 222 61 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 7.1s ease-in-out 4.2s infinite; --fdx: 17.7px; --frot: 267deg; transform-origin: 222px 61px;" />
-  <path d="M 222 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 6.7s ease-in-out 6.5s infinite; --fdx: -6.9px; --frot: 31deg; transform-origin: 222px 74px;" />
-  <path d="M 113 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 5.1s ease-in-out 6.3s infinite; --fdx: -14.2px; --frot: 263deg; transform-origin: 113px 74px;" />
-  <path d="M 680 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 4.3s ease-in-out 2.2s infinite; --fdx: -4.7px; --frot: 242deg; transform-origin: 680px 74px;" />
-  <path d="M 697 35 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 6.0s ease-in-out 1.6s infinite; --fdx: -1.5px; --frot: 134deg; transform-origin: 697px 35px;" />
-  <path d="M 665 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 6.6s ease-in-out 5.3s infinite; --fdx: -9.7px; --frot: 27deg; transform-origin: 665px 48px;" />
-  <path d="M 680 100 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 7.9s ease-in-out 6.0s infinite; --fdx: 12.5px; --frot: 254deg; transform-origin: 680px 100px;" />
-  <path d="M 697 35 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.4s ease-in-out 2.2s infinite; --fdx: 8.6px; --frot: 142deg; transform-origin: 697px 35px;" />
-  <path d="M 667 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 5.2s ease-in-out 6.3s infinite; --fdx: -5.4px; --frot: 122deg; transform-origin: 667px 48px;" />
-  <path d="M 678 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.1s ease-in-out 2.3s infinite; --fdx: -14.2px; --frot: 73deg; transform-origin: 678px 113px;" />
-  <path d="M 670 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 8.2s ease-in-out 0.7s infinite; --fdx: -14.2px; --frot: 161deg; transform-origin: 670px 48px;" />
-  <path d="M 693 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.7s ease-in-out 7.5s infinite; --fdx: -15.9px; --frot: 179deg; transform-origin: 693px 74px;" />
-  <path d="M 690 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 5.4s ease-in-out 4.8s infinite; --fdx: 1.3px; --frot: 240deg; transform-origin: 690px 48px;" />
-  <path d="M 717 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 8.2s ease-in-out 0.0s infinite; --fdx: -0.8px; --frot: 312deg; transform-origin: 717px 48px;" />
-  <path d="M 668 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 6.8s ease-in-out 5.7s infinite; --fdx: -7.1px; --frot: 351deg; transform-origin: 668px 113px;" />
+  <path d="M 681 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 8.2s ease-in-out 5.1s infinite; --fdx: -14.5px; --frot: 334deg; transform-origin: 681px 113px;" />
+  <path d="M 677 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 4.8s ease-in-out 1.8s infinite; --fdx: 3.7px; --frot: 12deg; transform-origin: 677px 48px;" />
+  <path d="M 667 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 6.8s ease-in-out 2.0s infinite; --fdx: 2.2px; --frot: 243deg; transform-origin: 667px 113px;" />
+  <path d="M 663 100 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 7.9s ease-in-out 3.9s infinite; --fdx: -7.9px; --frot: 75deg; transform-origin: 663px 100px;" />
+  <path d="M 684 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.0s ease-in-out 2.7s infinite; --fdx: 10.5px; --frot: 156deg; transform-origin: 684px 113px;" />
+  <path d="M 659 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 6.7s ease-in-out 5.1s infinite; --fdx: -14.2px; --frot: 277deg; transform-origin: 659px 48px;" />
+  <path d="M 693 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.4s ease-in-out 5.1s infinite; --fdx: 13.4px; --frot: 248deg; transform-origin: 693px 48px;" />
+  <path d="M 712 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 5.2s ease-in-out 1.5s infinite; --fdx: 16.8px; --frot: 176deg; transform-origin: 712px 48px;" />
+  <path d="M 666 100 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 5.5s ease-in-out 7.3s infinite; --fdx: 17.4px; --frot: 79deg; transform-origin: 666px 100px;" />
+  <path d="M 692 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 6.0s ease-in-out 2.8s infinite; --fdx: 9.3px; --frot: 15deg; transform-origin: 692px 48px;" />
+  <path d="M 694 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 7.5s ease-in-out 7.3s infinite; --fdx: -11.6px; --frot: 105deg; transform-origin: 694px 48px;" />
+  <path d="M 115 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 7.4s ease-in-out 6.3s infinite; --fdx: -3.8px; --frot: 81deg; transform-origin: 115px 74px;" />
+  <path d="M 103 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 7.8s ease-in-out 5.5s infinite; --fdx: 12.6px; --frot: 336deg; transform-origin: 103px 74px;" />
+  <path d="M 718 48 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 4.3s ease-in-out 0.6s infinite; --fdx: 16.8px; --frot: 336deg; transform-origin: 718px 48px;" />
+  <path d="M 661 113 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#ffffff" opacity="0" style="animation: petal-fall 6.2s ease-in-out 6.9s infinite; --fdx: -3.2px; --frot: 35deg; transform-origin: 661px 113px;" />
+  <path d="M 119 74 c -1.5 -3, 1.5 -6, 3 -3 c 1.5 3, -1.5 6, -3 3" fill="#d0ffd0" opacity="0" style="animation: petal-fall 7.3s ease-in-out 2.9s infinite; --fdx: 5.9px; --frot: 344deg; transform-origin: 119px 74px;" />
 
 
   <!-- Floating Sparkles (Fireflies) -->
-  <circle cx="504" cy="65" r="1.1" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.2s ease-in-out 1.9s infinite; --dx: 12.0px; --dy: -11.8px;" />
-  <circle cx="330" cy="62" r="1.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.4s ease-in-out 2.5s infinite; --dx: -3.1px; --dy: -11.5px;" />
-  <circle cx="61" cy="74" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.3s ease-in-out 4.1s infinite; --dx: -5.0px; --dy: 11.5px;" />
-  <circle cx="423" cy="84" r="0.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.0s ease-in-out 3.2s infinite; --dx: 2.3px; --dy: 9.3px;" />
-  <circle cx="428" cy="34" r="1.3" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.3s ease-in-out 2.2s infinite; --dx: -11.2px; --dy: -11.1px;" />
-  <circle cx="660" cy="54" r="0.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 7.0s ease-in-out 3.6s infinite; --dx: -7.6px; --dy: -9.3px;" />
-  <circle cx="394" cy="97" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.3s ease-in-out 4.3s infinite; --dx: 5.4px; --dy: -12.0px;" />
-  <circle cx="707" cy="60" r="1.4" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.8s ease-in-out 3.9s infinite; --dx: -5.4px; --dy: -0.8px;" />
-  <circle cx="547" cy="65" r="1.1" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.3s ease-in-out 2.5s infinite; --dx: 3.8px; --dy: -1.6px;" />
-  <circle cx="53" cy="66" r="0.9" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.9s ease-in-out 3.1s infinite; --dx: 9.6px; --dy: 3.2px;" />
-  <circle cx="618" cy="46" r="1.7" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.4s ease-in-out 3.9s infinite; --dx: 11.0px; --dy: 2.6px;" />
-  <circle cx="70" cy="108" r="1.2" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.2s ease-in-out 2.6s infinite; --dx: 7.5px; --dy: -4.0px;" />
-  <circle cx="217" cy="80" r="0.9" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.8s ease-in-out 1.0s infinite; --dx: -3.1px; --dy: -6.1px;" />
-  <circle cx="371" cy="109" r="0.9" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.5s ease-in-out 0.1s infinite; --dx: -9.0px; --dy: 0.2px;" />
-  <circle cx="255" cy="100" r="1.7" fill="#adff2f" opacity="0.45" style="animation: firefly-float 4.9s ease-in-out 3.6s infinite; --dx: -7.6px; --dy: 7.2px;" />
-  <circle cx="555" cy="45" r="1.5" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.2s ease-in-out 3.8s infinite; --dx: -12.8px; --dy: -7.1px;" />
-  <circle cx="306" cy="71" r="0.7" fill="#adff2f" opacity="0.45" style="animation: firefly-float 4.7s ease-in-out 0.3s infinite; --dx: -0.5px; --dy: -11.7px;" />
-  <circle cx="134" cy="112" r="1.7" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.6s ease-in-out 1.0s infinite; --dx: -0.7px; --dy: 1.6px;" />
-  <circle cx="622" cy="78" r="1.4" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.8s ease-in-out 1.9s infinite; --dx: 1.0px; --dy: -4.1px;" />
-  <circle cx="308" cy="39" r="0.6" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.3s ease-in-out 4.6s infinite; --dx: 10.3px; --dy: -8.0px;" />
-  <circle cx="196" cy="56" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.4s ease-in-out 1.2s infinite; --dx: -5.8px; --dy: 2.9px;" />
-  <circle cx="158" cy="31" r="1.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.7s ease-in-out 1.2s infinite; --dx: -12.8px; --dy: 9.6px;" />
-  <circle cx="468" cy="116" r="1.1" fill="#adff2f" opacity="0.45" style="animation: firefly-float 4.5s ease-in-out 3.2s infinite; --dx: -6.5px; --dy: -9.6px;" />
-  <circle cx="531" cy="97" r="0.9" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.2s ease-in-out 3.0s infinite; --dx: -6.6px; --dy: 6.1px;" />
-  <circle cx="577" cy="82" r="1.6" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.2s ease-in-out 2.7s infinite; --dx: -6.5px; --dy: -11.5px;" />
-  <circle cx="424" cy="105" r="1.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.8s ease-in-out 2.0s infinite; --dx: -5.2px; --dy: 9.8px;" />
-  <circle cx="264" cy="113" r="1.4" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.7s ease-in-out 3.8s infinite; --dx: -9.4px; --dy: -5.7px;" />
-  <circle cx="681" cy="77" r="1.2" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.6s ease-in-out 0.6s infinite; --dx: -1.1px; --dy: -12.5px;" />
+  <circle cx="710" cy="47" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.1s ease-in-out 0.8s infinite; --dx: 4.0px; --dy: 11.9px;" />
+  <circle cx="591" cy="35" r="1.0" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.9s ease-in-out 3.6s infinite; --dx: -11.2px; --dy: 7.5px;" />
+  <circle cx="175" cy="116" r="1.1" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.2s ease-in-out 0.5s infinite; --dx: 3.1px; --dy: -3.3px;" />
+  <circle cx="164" cy="40" r="0.7" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.0s ease-in-out 1.8s infinite; --dx: -6.4px; --dy: -9.6px;" />
+  <circle cx="212" cy="89" r="1.1" fill="#adff2f" opacity="0.45" style="animation: firefly-float 6.1s ease-in-out 0.6s infinite; --dx: 1.7px; --dy: 9.2px;" />
+  <circle cx="104" cy="68" r="1.0" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.3s ease-in-out 4.0s infinite; --dx: 3.7px; --dy: -11.0px;" />
+  <circle cx="216" cy="30" r="1.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.7s ease-in-out 1.1s infinite; --dx: -5.1px; --dy: -9.1px;" />
+  <circle cx="489" cy="94" r="1.1" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.9s ease-in-out 2.6s infinite; --dx: 7.4px; --dy: 9.3px;" />
+  <circle cx="578" cy="70" r="0.7" fill="#adff2f" opacity="0.45" style="animation: firefly-float 4.7s ease-in-out 2.5s infinite; --dx: -7.3px; --dy: -8.1px;" />
+  <circle cx="511" cy="98" r="0.7" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.6s ease-in-out 2.0s infinite; --dx: -6.7px; --dy: 4.5px;" />
+  <circle cx="346" cy="43" r="1.3" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.8s ease-in-out 1.6s infinite; --dx: 5.7px; --dy: -8.5px;" />
+  <circle cx="188" cy="61" r="1.2" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 7.1s ease-in-out 4.0s infinite; --dx: -10.1px; --dy: -10.9px;" />
+  <circle cx="52" cy="105" r="1.2" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.9s ease-in-out 4.7s infinite; --dx: -9.5px; --dy: 12.3px;" />
+  <circle cx="614" cy="85" r="1.5" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.3s ease-in-out 4.2s infinite; --dx: -7.1px; --dy: 4.7px;" />
+  <circle cx="191" cy="81" r="0.6" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.0s ease-in-out 2.7s infinite; --dx: 9.4px; --dy: 7.1px;" />
+  <circle cx="686" cy="76" r="1.0" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.9s ease-in-out 2.7s infinite; --dx: 10.7px; --dy: -2.1px;" />
+  <circle cx="674" cy="103" r="1.4" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.7s ease-in-out 2.0s infinite; --dx: -6.4px; --dy: 4.6px;" />
+  <circle cx="672" cy="106" r="0.9" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.5s ease-in-out 4.7s infinite; --dx: -8.0px; --dy: -4.4px;" />
+  <circle cx="403" cy="61" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.6s ease-in-out 4.5s infinite; --dx: 6.9px; --dy: -9.7px;" />
+  <circle cx="348" cy="86" r="1.2" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 6.6s ease-in-out 4.8s infinite; --dx: -4.6px; --dy: -1.0px;" />
+  <circle cx="292" cy="89" r="0.8" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.7s ease-in-out 0.7s infinite; --dx: 1.0px; --dy: 2.0px;" />
+  <circle cx="181" cy="83" r="1.9" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.4s ease-in-out 2.1s infinite; --dx: -3.8px; --dy: 2.7px;" />
+  <circle cx="434" cy="96" r="1.9" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.2s ease-in-out 4.6s infinite; --dx: -9.5px; --dy: -2.8px;" />
+  <circle cx="634" cy="113" r="1.8" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 4.8s ease-in-out 1.6s infinite; --dx: 11.1px; --dy: 1.2px;" />
+  <circle cx="242" cy="70" r="1.3" fill="#adff2f" opacity="0.45" style="animation: firefly-float 3.8s ease-in-out 0.3s infinite; --dx: -4.9px; --dy: -7.5px;" />
+  <circle cx="39" cy="40" r="1.5" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 5.7s ease-in-out 3.3s infinite; --dx: -12.1px; --dy: -1.1px;" />
+  <circle cx="637" cy="101" r="1.0" fill="#adff2f" opacity="0.45" style="animation: firefly-float 5.5s ease-in-out 0.5s infinite; --dx: -8.1px; --dy: -11.6px;" />
+  <circle cx="88" cy="95" r="1.5" fill="#e8ffc2" opacity="0.45" style="animation: firefly-float 3.7s ease-in-out 0.0s infinite; --dx: -6.7px; --dy: 4.7px;" />
 
 </svg>
