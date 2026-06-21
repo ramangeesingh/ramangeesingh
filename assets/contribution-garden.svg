@@ -140,18 +140,18 @@
 
   <!-- Month and Day Labels -->
   <text x="35" y="22" class="label">Jun</text>
-  <text x="74" y="22" class="label">Jul</text>
-  <text x="126" y="22" class="label">Aug</text>
-  <text x="191" y="22" class="label">Sep</text>
-  <text x="243" y="22" class="label">Oct</text>
-  <text x="295" y="22" class="label">Nov</text>
-  <text x="360" y="22" class="label">Dec</text>
-  <text x="412" y="22" class="label">Jan</text>
-  <text x="464" y="22" class="label">Feb</text>
-  <text x="516" y="22" class="label">Mar</text>
-  <text x="581" y="22" class="label">Apr</text>
-  <text x="633" y="22" class="label">May</text>
-  <text x="698" y="22" class="label">Jun</text>
+  <text x="61" y="22" class="label">Jul</text>
+  <text x="113" y="22" class="label">Aug</text>
+  <text x="178" y="22" class="label">Sep</text>
+  <text x="230" y="22" class="label">Oct</text>
+  <text x="282" y="22" class="label">Nov</text>
+  <text x="347" y="22" class="label">Dec</text>
+  <text x="399" y="22" class="label">Jan</text>
+  <text x="451" y="22" class="label">Feb</text>
+  <text x="503" y="22" class="label">Mar</text>
+  <text x="568" y="22" class="label">Apr</text>
+  <text x="620" y="22" class="label">May</text>
+  <text x="685" y="22" class="label">Jun</text>
 
     <text x="18" y="52" class="label" text-anchor="middle">M</text>
     <text x="18" y="78" class="label" text-anchor="middle">W</text>
@@ -197,14 +197,14 @@
   <rect x="95" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="95" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="95" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="95" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="95" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
   <rect x="95" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="95" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="95" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="108" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
+  <rect x="108" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="108" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
@@ -259,21 +259,21 @@
   <rect x="199" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="212" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="212" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="212" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="212" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="212" y="56" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
+  <rect x="212" y="69" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
   <rect x="212" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="212" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="212" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="225" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="225" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="225" y="56" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
-  <rect x="225" y="69" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="225" y="56" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="225" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="225" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="225" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="225" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="238" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="238" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="238" y="56" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="238" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="238" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="238" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="238" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
@@ -371,14 +371,14 @@
   <rect x="407" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="420" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="420" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="420" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="420" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
   <rect x="420" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="420" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="420" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="420" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="433" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="433" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="433" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="433" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="433" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="433" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="433" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
@@ -462,14 +462,14 @@
   <rect x="576" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="589" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="589" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="589" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="589" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
   <rect x="589" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="589" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="589" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="589" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="602" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="602" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="602" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="602" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="602" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="602" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="602" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
@@ -489,58 +489,52 @@
   <rect x="628" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="628" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="641" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="641" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="641" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="641" y="43" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="641" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
   <rect x="641" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="641" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="641" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="641" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="641" y="95" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="641" y="108" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
   <rect x="654" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="654" y="43" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="654" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="654" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="654" y="43" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
+  <rect x="654" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="654" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
   <rect x="654" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="654" y="95" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
-  <rect x="654" y="108" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="654" y="95" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="654" y="108" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
   <rect x="667" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="667" y="43" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
-  <rect x="667" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="667" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
+  <rect x="667" y="43" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="667" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="667" y="69" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
   <rect x="667" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="667" y="95" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="667" y="108" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="680" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="680" y="43" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="680" y="56" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="680" y="69" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="667" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="667" y="108" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
+  <rect x="680" y="30" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
+  <rect x="680" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="680" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="680" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
   <rect x="680" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="680" y="95" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="680" y="108" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
-  <rect x="693" y="30" width="10" height="10" rx="2" fill="#006d32" class="grid-cell" />
-  <rect x="693" y="43" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="680" y="95" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
+  <rect x="680" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="693" y="30" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
+  <rect x="693" y="43" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
   <rect x="693" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="693" y="69" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
+  <rect x="693" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="693" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
   <rect x="693" y="95" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
   <rect x="693" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="706" y="30" width="10" height="10" rx="2" fill="#0e4429" class="grid-cell" />
-  <rect x="706" y="43" width="10" height="10" rx="2" fill="#26a641" class="grid-cell" />
-  <rect x="706" y="56" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="706" y="69" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="706" y="82" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
-  <rect x="706" y="95" width="10" height="10" rx="2" fill="#39d353" class="grid-cell" />
-  <rect x="706" y="108" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
+  <rect x="706" y="30" width="10" height="10" rx="2" fill="#161b22" class="grid-cell" />
 
 
   <!-- ── Vine Branches (offshoots) ── -->
-  <path d="M 113.0 66.2 Q 113.8 66.0, 113.0 70.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.1" stroke-linecap="round" opacity="0.75" />
-  <path d="M 230.0 59.3 Q 233.6 70.9, 230.0 70.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
-  <path d="M 659.0 82.5 Q 659.4 62.0, 659.0 52.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.5" stroke-linecap="round" opacity="0.82" />
-  <path d="M 659.0 82.5 Q 657.1 102.2, 659.0 109.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+  <path d="M 100.0 66.2 Q 100.8 66.0, 100.0 70.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.1" stroke-linecap="round" opacity="0.75" />
+  <path d="M 217.0 66.9 Q 220.6 74.7, 217.0 70.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+  <path d="M 646.0 85.7 Q 646.4 63.7, 646.0 52.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.5" stroke-linecap="round" opacity="0.82" />
+  <path d="M 646.0 85.7 Q 644.1 103.8, 646.0 109.0" fill="none" stroke="url(#vine-grad)" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
 
 
   <!-- ── Backbone Vine ── -->
-  <path d="M 35.0 68.5 C 51.6 67.8, 70.4 67.0, 87.0 66.2 C 94.3 68.4, 131.7 69.6, 139.0 71.8 C 146.3 69.2, 183.7 69.5, 191.0 66.9 C 198.3 65.3, 235.7 60.8, 243.0 59.3 C 250.3 59.1, 287.7 54.6, 295.0 54.4 C 302.3 57.1, 339.7 57.5, 347.0 60.3 C 354.3 57.7, 391.7 58.2, 399.0 55.7 C 406.3 59.9, 443.7 62.0, 451.0 66.2 C 458.3 64.9, 495.7 69.3, 503.0 67.9 C 510.3 67.0, 547.7 66.9, 555.0 65.9 C 562.3 64.7, 599.7 62.2, 607.0 61.0 C 614.3 68.8, 651.7 74.7, 659.0 82.5 C 666.3 73.4, 703.7 75.2, 711.0 66.1" fill="none" stroke="url(#vine-grad)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" filter="url(#vine-glow)" style="animation: vine-pulse 3.5s ease-in-out infinite;" />
+  <path d="M 35.0 68.5 C 51.6 67.8, 70.4 67.0, 87.0 66.2 C 94.3 68.4, 131.7 69.6, 139.0 71.8 C 146.3 69.2, 183.7 69.5, 191.0 66.9 C 198.3 65.3, 235.7 60.8, 243.0 59.3 C 250.3 59.1, 287.7 54.6, 295.0 54.4 C 302.3 57.1, 339.7 57.5, 347.0 60.3 C 354.3 57.7, 391.7 58.2, 399.0 55.7 C 406.3 59.9, 443.7 62.0, 451.0 66.2 C 458.3 64.9, 495.7 69.3, 503.0 67.9 C 510.3 67.0, 547.7 66.9, 555.0 65.9 C 562.3 67.8, 599.7 68.9, 607.0 70.7 C 614.3 74.7, 651.7 81.8, 659.0 85.7 C 666.3 78.2, 703.7 78.1, 711.0 70.6" fill="none" stroke="url(#vine-grad)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" filter="url(#vine-glow)" style="animation: vine-pulse 3.5s ease-in-out infinite;" />
 
   <!-- ── Leaves ── -->
   <ellipse id="leaf-1-0" cx="35.0" cy="68.5" rx="3.7" ry="1.5" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(33 35.0 68.5)" style="animation: leaf-sway-r 2.5s ease-in-out 1.6s infinite; transform-origin: 35.0px 68.5px;" />
@@ -567,32 +561,32 @@
   <ellipse id="leaf-9-2" cx="477.0" cy="67.1" rx="6.2" ry="2.6" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(22 477.0 67.1)" style="animation: leaf-sway-r 4.3s ease-in-out 1.7s infinite; transform-origin: 477.0px 67.1px;" />
   <ellipse id="leaf-10-1" cx="516.0" cy="67.4" rx="3.8" ry="1.6" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(-51 516.0 67.4)" style="animation: leaf-sway-l 3.2s ease-in-out 1.3s infinite; transform-origin: 516.0px 67.4px;" />
   <ellipse id="leaf-11-0" cx="555.0" cy="65.9" rx="4.6" ry="1.9" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(31 555.0 65.9)" style="animation: leaf-sway-r 4.0s ease-in-out 1.6s infinite; transform-origin: 555.0px 65.9px;" />
-  <ellipse id="leaf-11-2" cx="581.0" cy="63.5" rx="5.9" ry="2.5" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(63 581.0 63.5)" style="animation: leaf-sway-r 4.3s ease-in-out 0.5s infinite; transform-origin: 581.0px 63.5px;" />
-  <ellipse id="leaf-11-3" cx="594.0" cy="62.2" rx="4.8" ry="2.0" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(6 594.0 62.2)" style="animation: leaf-sway-r 2.6s ease-in-out 2.5s infinite; transform-origin: 594.0px 62.2px;" />
-  <ellipse id="leaf-12-0" cx="607.0" cy="61.0" rx="5.3" ry="2.2" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(45 607.0 61.0)" style="animation: leaf-sway-r 2.7s ease-in-out 1.5s infinite; transform-origin: 607.0px 61.0px;" />
-  <ellipse id="leaf-12-2" cx="633.0" cy="71.7" rx="6.4" ry="2.7" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(-16 633.0 71.7)" style="animation: leaf-sway-l 4.0s ease-in-out 0.4s infinite; transform-origin: 633.0px 71.7px;" />
-  <ellipse id="leaf-13-3" cx="698.0" cy="70.2" rx="5.4" ry="2.3" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(61 698.0 70.2)" style="animation: leaf-sway-r 3.7s ease-in-out 2.7s infinite; transform-origin: 698.0px 70.2px;" />
+  <ellipse id="leaf-11-2" cx="581.0" cy="68.3" rx="5.9" ry="2.5" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(63 581.0 68.3)" style="animation: leaf-sway-r 4.3s ease-in-out 0.5s infinite; transform-origin: 581.0px 68.3px;" />
+  <ellipse id="leaf-11-3" cx="594.0" cy="69.5" rx="4.8" ry="2.0" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(6 594.0 69.5)" style="animation: leaf-sway-r 2.6s ease-in-out 2.5s infinite; transform-origin: 594.0px 69.5px;" />
+  <ellipse id="leaf-12-0" cx="607.0" cy="70.7" rx="5.3" ry="2.2" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(45 607.0 70.7)" style="animation: leaf-sway-r 2.7s ease-in-out 1.5s infinite; transform-origin: 607.0px 70.7px;" />
+  <ellipse id="leaf-12-2" cx="633.0" cy="78.2" rx="6.4" ry="2.7" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(-16 633.0 78.2)" style="animation: leaf-sway-l 4.0s ease-in-out 0.4s infinite; transform-origin: 633.0px 78.2px;" />
+  <ellipse id="leaf-13-3" cx="698.0" cy="74.4" rx="5.4" ry="2.3" fill="url(#leaf-grad)" opacity="0.88" transform="rotate(61 698.0 74.4)" style="animation: leaf-sway-r 3.7s ease-in-out 2.7s infinite; transform-origin: 698.0px 74.4px;" />
 
 
   <!-- ── Flowers ── -->
   <g filter="url(#flower-glow)">
-  <ellipse cx="113.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(0 113.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <ellipse cx="113.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(72 113.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <ellipse cx="113.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(144 113.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <ellipse cx="113.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(216 113.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <ellipse cx="113.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(288 113.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <circle cx="113.0" cy="67.0" r="2.2" fill="#ffb7d5" opacity="0.95" style="animation: center-glow 3.1s ease-in-out 1.8s infinite; transform-origin: 113.0px 67.0px;" />
-  <ellipse cx="230.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(0 230.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <ellipse cx="230.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(72 230.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <ellipse cx="230.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(144 230.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <ellipse cx="230.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(216 230.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <ellipse cx="230.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(288 230.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <circle cx="230.0" cy="54.0" r="2.2" fill="#e8d7ff" opacity="0.95" style="animation: center-glow 3.2s ease-in-out 1.0s infinite; transform-origin: 230.0px 54.0px;" />
-  <ellipse cx="659.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(45 659.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 659.0px 43.0px;" />
-  <ellipse cx="659.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(135 659.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 659.0px 43.0px;" />
-  <ellipse cx="659.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(225 659.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 659.0px 43.0px;" />
-  <ellipse cx="659.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(315 659.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 659.0px 43.0px;" />
-  <circle cx="659.0" cy="43.0" r="1.6" fill="#dda0dd" opacity="0.88" />
+  <ellipse cx="100.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(0 100.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <ellipse cx="100.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(72 100.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <ellipse cx="100.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(144 100.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <ellipse cx="100.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(216 100.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <ellipse cx="100.0" cy="63.5" rx="3.2" ry="1.8" fill="#ff4d94" opacity="0.82" transform="rotate(288 100.0 67.0)" style="animation: petal-bloom 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <circle cx="100.0" cy="67.0" r="2.2" fill="#ffb7d5" opacity="0.95" style="animation: center-glow 3.1s ease-in-out 1.8s infinite; transform-origin: 100.0px 67.0px;" />
+  <ellipse cx="217.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(0 217.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <ellipse cx="217.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(72 217.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <ellipse cx="217.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(144 217.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <ellipse cx="217.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(216 217.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <ellipse cx="217.0" cy="50.5" rx="3.2" ry="1.8" fill="#c084fc" opacity="0.82" transform="rotate(288 217.0 54.0)" style="animation: petal-bloom 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <circle cx="217.0" cy="54.0" r="2.2" fill="#e8d7ff" opacity="0.95" style="animation: center-glow 3.2s ease-in-out 1.0s infinite; transform-origin: 217.0px 54.0px;" />
+  <ellipse cx="646.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(45 646.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 646.0px 43.0px;" />
+  <ellipse cx="646.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(135 646.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 646.0px 43.0px;" />
+  <ellipse cx="646.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(225 646.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 646.0px 43.0px;" />
+  <ellipse cx="646.0" cy="40.5" rx="2.0" ry="1.2" fill="#a855f7" opacity="0.72" transform="rotate(315 646.0 43.0)" style="animation: petal-bloom 4.0s ease-in-out 3.0s infinite; transform-origin: 646.0px 43.0px;" />
+  <circle cx="646.0" cy="43.0" r="1.6" fill="#dda0dd" opacity="0.88" />
   </g>
 
   <!-- ── Fireflies ── -->
